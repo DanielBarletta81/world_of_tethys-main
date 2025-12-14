@@ -9,6 +9,8 @@ const TETHYS_LINKS = {
   tethysianGodsStripe: 'https://buy.stripe.com/00wcN69dEcz4aGBgxYgMw03',
   // Replace with your live SureCart storefront URL when ready.
   surecartSignals: 'https://your-surecart-store.example/signals-dispatch',
+  previewSignalsEp01: 'https://cdn.example.com/signals/previews/episode-01.mp3',
+  downloadSignalsEp01: 'https://cdn.example.com/signals/downloads/episode-01.zip',
   amazonAuthor: 'https://www.amazon.com/author/dcbarletta',
   amazonSignals01: 'https://www.amazon.com/dp/B0G5TWV2GH',
   amazonSkyCity: 'https://www.amazon.com/dp/B0G572X42L',
@@ -37,6 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openInNewTab) {
       element.setAttribute('target', '_blank');
       element.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+
+  document.querySelectorAll('[data-audio-link]').forEach((element) => {
+    const url = TETHYS_LINKS[element.dataset.audioLink];
+    if (!url) return;
+    element.setAttribute('src', url);
+    if (element.dataset.autoplay === 'true') {
+      element.play().catch(() => {});
     }
   });
 });

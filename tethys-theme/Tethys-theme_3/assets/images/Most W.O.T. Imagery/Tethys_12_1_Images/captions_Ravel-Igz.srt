@@ -1,0 +1,660 @@
+1
+00:00:06,873 --> 00:00:08,174
+<b><font size="8" color="#ffffff">Can't sleep?</font></b>
+
+2
+00:00:10,10 --> 00:00:11,211
+<b><font size="8" color="#ffffff">You keep talking.</font></b>
+
+3
+00:00:12,812 --> 00:00:13,680
+<b><font size="8" color="#ffffff">Incorrect.</font></b>
+
+4
+00:00:14,647 --> 00:00:15,849
+<b><font size="8" color="#ffffff">I keep existing.</font></b>
+
+5
+00:00:16,649 --> 00:00:18,251
+<b><font size="8" color="#ffffff">Your brain is doing the rest.</font></b>
+
+6
+00:00:19,519 --> 00:00:20,487
+<b><font size="8" color="#ffffff">You could have left me.</font></b>
+
+7
+00:00:21,287 --> 00:00:22,255
+<b><font size="8" color="#ffffff">After the fall.</font></b>
+
+8
+00:00:22,989 --> 00:00:24,224
+<b><font size="8" color="#ffffff">You could have just watched.</font></b>
+
+9
+00:00:25,759 --> 00:00:26,559
+<b><font size="8" color="#ffffff">I did watch.</font></b>
+
+10
+00:00:27,193 --> 00:00:27,927
+<b><font size="8" color="#ffffff">Then I got bored.</font></b>
+
+11
+00:00:29,996 --> 00:00:30,730
+<b><font size="8" color="#ffffff">Try again.</font></b>
+
+12
+00:00:31,998 --> 00:00:32,565
+<b><font size="8" color="#ffffff">Fine.</font></b>
+
+13
+00:00:33,266 --> 00:00:37,504
+<b><font size="8" color="#ffffff">I didn't feel like marking the
+mountain's mistake permanent.</font></b>
+
+14
+00:00:39,72 --> 00:00:39,906
+<b><font size="8" color="#ffffff">What mistake?</font></b>
+
+15
+00:00:43,476 --> 00:00:47,113
+<b><font size="8" color="#ffffff">Throwing away Meldin's golden
+apprentice.</font></b>
+
+16
+00:00:50,884 --> 00:00:51,184
+<b><font size="8" color="#ffffff">What?</font></b>
+
+17
+00:00:52,952 --> 00:00:53,987
+<b><font size="8" color="#ffffff">You heard me.</font></b>
+
+18
+00:00:55,855 --> 00:00:56,890
+<b><font size="8" color="#ffffff">You're his, aren't you?</font></b>
+
+19
+00:00:57,757 --> 00:01:00,560
+<b><font size="8" color="#ffffff">Not by blood, by methodology.</font></b>
+
+20
+00:01:00,894 --> 00:01:01,361
+<b><font size="8" color="#ffffff">Very...</font></b>
+
+21
+00:01:02,28 --> 00:01:03,930
+<b><font size="8" color="#ffffff">What do the organs say, not the
+ledger?</font></b>
+
+22
+00:01:04,164 --> 00:01:04,864
+<b><font size="8" color="#ffffff">Very annoying.</font></b>
+
+23
+00:01:07,400 --> 00:01:07,834
+<b><font size="8" color="#ffffff">Did I...</font></b>
+
+24
+00:01:08,868 --> 00:01:11,171
+<b><font size="8" color="#ffffff">Have I said his name out loud?</font></b>
+
+25
+00:01:15,41 --> 00:01:15,275
+<b><font size="8" color="#ffffff">Hmm.</font></b>
+
+26
+00:01:15,909 --> 00:01:23,917
+<b><font size="8" color="#ffffff">Once, in your sleep, you said,
+Meldon, the city is a wound.</font></b>
+
+27
+00:01:25,251 --> 00:01:28,88
+<b><font size="8" color="#ffffff">Which, by the way, is very
+dramatic.</font></b>
+
+28
+00:01:28,722 --> 00:01:29,522
+<b><font size="8" color="#ffffff">Ten out of ten.</font></b>
+
+29
+00:01:30,390 --> 00:01:31,825
+<b><font size="8" color="#ffffff">I would quote that later.</font></b>
+
+30
+00:01:32,625 --> 00:01:33,93
+<b><font size="8" color="#ffffff">That's not...</font></b>
+
+31
+00:01:35,762 --> 00:01:36,996
+<b><font size="8" color="#ffffff">No, I guess Dave is one thing.</font></b>
+
+32
+00:01:36,996 --> 00:01:38,331
+<b><font size="8" color="#ffffff">You said Meldon's apprentice.</font></b>
+
+33
+00:01:38,865 --> 00:01:40,333
+<b><font size="8" color="#ffffff">How would you know that?</font></b>
+
+34
+00:01:44,170 --> 00:01:47,273
+<b><font size="8" color="#ffffff">You think knowledge can't climb
+down a mountain?</font></b>
+
+35
+00:01:48,475 --> 00:01:51,845
+<b><font size="8" color="#ffffff">That it gets stuck in towers
+unless someone carries it out in a</font></b>
+
+36
+00:01:51,845 --> 00:01:52,312
+<b><font size="8" color="#ffffff">ledger?</font></b>
+
+37
+00:01:53,646 --> 00:01:54,814
+<b><font size="8" color="#ffffff">That's how they taught us.</font></b>
+
+38
+00:01:55,849 --> 00:01:57,517
+<b><font size="8" color="#ffffff">Everything important stays in
+the hall.</font></b>
+
+39
+00:01:58,918 --> 00:01:59,519
+<b><font size="8" color="#ffffff">In the minutes.</font></b>
+
+40
+00:01:59,919 --> 00:02:00,553
+<b><font size="8" color="#ffffff">The archive.</font></b>
+
+41
+00:02:02,155 --> 00:02:02,389
+<b><font size="8" color="#ffffff">Hmm.</font></b>
+
+42
+00:02:02,489 --> 00:02:04,491
+<b><font size="8" color="#ffffff">Of course they did.</font></b>
+
+43
+00:02:07,927 --> 00:02:08,495
+<b><font size="8" color="#ffffff">Listen.</font></b>
+
+44
+00:02:11,531 --> 00:02:13,33
+<b><font size="8" color="#ffffff">Yes, of course they did.</font></b>
+
+45
+00:02:15,669 --> 00:02:16,69
+<b><font size="8" color="#ffffff">Listen.</font></b>
+
+46
+00:02:17,837 --> 00:02:19,105
+<b><font size="8" color="#ffffff">The city leaks.</font></b>
+
+47
+00:02:19,406 --> 00:02:20,306
+<b><font size="8" color="#ffffff">It's always leaked.</font></b>
+
+48
+00:02:20,407 --> 00:02:23,443
+<b><font size="8" color="#ffffff">Water, steam, stories.</font></b>
+
+49
+00:02:24,144 --> 00:02:27,213
+<b><font size="8" color="#ffffff">You can't cut that deep into a
+mountain and expect it to just</font></b>
+
+50
+00:02:27,213 --> 00:02:27,747
+<b><font size="8" color="#ffffff">forget.</font></b>
+
+51
+00:02:32,318 --> 00:02:35,522
+<b><font size="8" color="#ffffff">I know about Meldon, long before
+you fall.</font></b>
+
+52
+00:02:36,990 --> 00:02:40,560
+<b><font size="8" color="#ffffff">Old man in the triumvirate, who
+kept asking the wrong questions,</font></b>
+
+53
+00:02:40,627 --> 00:02:43,763
+<b><font size="8" color="#ffffff">wanted to turn the weep down,
+talked about subjects and</font></b>
+
+54
+00:02:43,763 --> 00:02:46,166
+<b><font size="8" color="#ffffff">variables, like people with more
+than numbers.</font></b>
+
+55
+00:02:46,866 --> 00:02:51,271
+<b><font size="8" color="#ffffff">Mixed lineage apprentices, a
+rail he liked to lean on above Bath</font></b>
+
+56
+00:02:51,271 --> 00:02:52,639
+<b><font size="8" color="#ffffff">Row when he did his thinking.</font></b>
+
+57
+00:02:54,708 --> 00:02:56,943
+<b><font size="8" color="#ffffff">That rail, you know about that
+rail.</font></b>
+
+58
+00:02:57,811 --> 00:02:58,812
+<b><font size="8" color="#ffffff">It's a very loud rail.</font></b>
+
+59
+00:02:59,346 --> 00:03:00,547
+<b><font size="8" color="#ffffff">Stone remembers hands.</font></b>
+
+60
+00:03:00,547 --> 00:03:02,816
+<b><font size="8" color="#ffffff">His were distinctive.</font></b>
+
+61
+00:03:05,919 --> 00:03:08,488
+<b><font size="8" color="#ffffff">Oh, you've never been inside the
+city.</font></b>
+
+62
+00:03:09,55 --> 00:03:10,490
+<b><font size="8" color="#ffffff">You said you haven't anyway.</font></b>
+
+63
+00:03:12,392 --> 00:03:12,992
+<b><font size="8" color="#ffffff">I haven't.</font></b>
+
+64
+00:03:13,693 --> 00:03:17,664
+<b><font size="8" color="#ffffff">But the weep runs over rock that
+goes all the way down and roots go</font></b>
+
+65
+00:03:17,664 --> 00:03:19,532
+<b><font size="8" color="#ffffff">places that your ledges don't.</font></b>
+
+66
+00:03:21,401 --> 00:03:25,438
+<b><font size="8" color="#ffffff">Kith listens to pipes, to gossip,
+to the stories groundside</font></b>
+
+67
+00:03:25,438 --> 00:03:30,76
+<b><font size="8" color="#ffffff">runners bring when they flop down
+by the fire and say, you won't</font></b>
+
+68
+00:03:30,76 --> 00:03:30,710
+<b><font size="8" color="#ffffff">believe it.</font></b>
+
+69
+00:03:30,877 --> 00:03:33,513
+<b><font size="8" color="#ffffff">You won't believe what the sky
+folk did this time.</font></b>
+
+70
+00:03:34,814 --> 00:03:39,919
+<b><font size="8" color="#ffffff">I listen to him and sometimes to
+the mountain itself when it's in</font></b>
+
+71
+00:03:39,919 --> 00:03:40,553
+<b><font size="8" color="#ffffff">the mood.</font></b>
+
+72
+00:03:41,888 --> 00:03:43,356
+<b><font size="8" color="#ffffff">That's not an answer.</font></b>
+
+73
+00:03:45,291 --> 00:03:45,925
+<b><font size="8" color="#ffffff">All right.</font></b>
+
+74
+00:03:46,493 --> 00:03:48,161
+<b><font size="8" color="#ffffff">Here's an answer you might
+accept.</font></b>
+
+75
+00:03:48,962 --> 00:03:50,563
+<b><font size="8" color="#ffffff">20 years ago.</font></b>
+
+76
+00:03:51,531 --> 00:03:52,432
+<b><font size="8" color="#ffffff">A lower tier.</font></b>
+
+77
+00:03:52,532 --> 00:03:56,970
+<b><font size="8" color="#ffffff">kid with a burned hand came down
+with the caravan, tried to trade</font></b>
+
+78
+00:03:56,970 --> 00:03:58,738
+<b><font size="8" color="#ffffff">weep schematics for medicine.</font></b>
+
+79
+00:03:59,539 --> 00:04:02,676
+<b><font size="8" color="#ffffff">Couldn't read half of what he'd
+stolen, but he remembered a name.</font></b>
+
+80
+00:04:03,143 --> 00:04:04,10
+<b><font size="8" color="#ffffff">Meldon.</font></b>
+
+81
+00:04:05,45 --> 00:04:07,147
+<b><font size="8" color="#ffffff">The only one who cares if the baths
+run hot.</font></b>
+
+82
+00:04:10,16 --> 00:04:13,753
+<b><font size="8" color="#ffffff">Ten years ago, a sky-guard
+deserter drank himself sideways</font></b>
+
+83
+00:04:13,753 --> 00:04:17,924
+<b><font size="8" color="#ffffff">in a cliff tavern and cried about
+one decent man in the chamber.</font></b>
+
+84
+00:04:18,258 --> 00:04:18,892
+<b><font size="8" color="#ffffff">Meldon.</font></b>
+
+85
+00:04:19,392 --> 00:04:19,926
+<b><font size="8" color="#ffffff">Again.</font></b>
+
+86
+00:04:20,894 --> 00:04:24,30
+<b><font size="8" color="#ffffff">The one who talked about the city
+like an equation you could still</font></b>
+
+87
+00:04:24,30 --> 00:04:24,831
+<b><font size="8" color="#ffffff">change.</font></b>
+
+88
+00:04:27,367 --> 00:04:30,503
+<b><font size="8" color="#ffffff">Last year, a healer from Bath Row
+came.</font></b>
+
+89
+00:04:31,471 --> 00:04:34,7
+<b><font size="8" color="#ffffff">He came here with a coughing
+child.</font></b>
+
+90
+00:04:34,674 --> 00:04:38,645
+<b><font size="8" color="#ffffff">Told me about a body on a slab and a
+boy in the corner who looked at the</font></b>
+
+91
+00:04:38,645 --> 00:04:40,113
+<b><font size="8" color="#ffffff">corpse like it betrayed him.</font></b>
+
+92
+00:04:41,147 --> 00:04:43,950
+<b><font size="8" color="#ffffff">She didn't catch your name, but
+the way she described a look, I</font></b>
+
+93
+00:04:43,950 --> 00:04:48,254
+<b><font size="8" color="#ffffff">recognized it as soon as you woke
+up under my tree.</font></b>
+
+94
+00:04:49,589 --> 00:04:54,94
+<b><font size="8" color="#ffffff">But the way she described the
+look, I recognized it as soon as</font></b>
+
+95
+00:04:54,94 --> 00:04:55,795
+<b><font size="8" color="#ffffff">you woke up under that tree.</font></b>
+
+96
+00:04:57,564 --> 00:05:06,106
+<b><font size="8" color="#ffffff">He said, his wife, he said she'd
+gone groundside once to trade.</font></b>
+
+97
+00:05:07,374 --> 00:05:13,146
+<b><font size="8" color="#ffffff">He said she'd gone groundside
+once to do tradings.</font></b>
+
+98
+00:05:13,947 --> 00:05:15,615
+<b><font size="8" color="#ffffff">I thought he was just bragging.</font></b>
+
+99
+00:05:17,217 --> 00:05:19,386
+<b><font size="8" color="#ffffff">Even in cages, people talk.</font></b>
+
+100
+00:05:20,353 --> 00:05:24,24
+<b><font size="8" color="#ffffff">Some of them talk their way down
+the mountain, some of them don't</font></b>
+
+101
+00:05:24,24 --> 00:05:24,424
+<b><font size="8" color="#ffffff">make it.</font></b>
+
+102
+00:05:24,891 --> 00:05:26,326
+<b><font size="8" color="#ffffff">But their stories do.</font></b>
+
+103
+00:05:27,794 --> 00:05:31,765
+<b><font size="8" color="#ffffff">You think the city can just end it
+all with a signature?</font></b>
+
+104
+00:05:32,499 --> 00:05:33,266
+<b><font size="8" color="#ffffff">It can't.</font></b>
+
+105
+00:05:33,266 --> 00:05:36,369
+<b><font size="8" color="#ffffff">It can only make the truth take the
+long way around.</font></b>
+
+106
+00:05:40,340 --> 00:05:41,141
+<b><font size="8" color="#ffffff">Meldon.</font></b>
+
+107
+00:05:43,777 --> 00:05:44,244
+<b><font size="8" color="#ffffff">Meldon.</font></b>
+
+108
+00:05:46,513 --> 00:05:46,980
+<b><font size="8" color="#ffffff">Tried.</font></b>
+
+109
+00:05:47,447 --> 00:05:49,849
+<b><font size="8" color="#ffffff">He tried to change it from the
+inside.</font></b>
+
+110
+00:05:50,650 --> 00:05:52,252
+<b><font size="8" color="#ffffff">He called it an experiment.</font></b>
+
+111
+00:05:54,654 --> 00:05:57,924
+<b><font size="8" color="#ffffff">He said we were supposed to adjust
+it if it became harmful.</font></b>
+
+112
+00:05:59,526 --> 00:06:00,260
+<b><font size="8" color="#ffffff">That fits.</font></b>
+
+113
+00:06:01,461 --> 00:06:03,229
+<b><font size="8" color="#ffffff">The Rock liked him for a while.</font></b>
+
+114
+00:06:04,64 --> 00:06:04,564
+<b><font size="8" color="#ffffff">The Rock?</font></b>
+
+115
+00:06:05,932 --> 00:06:07,334
+<b><font size="8" color="#ffffff">He died thinking he failed.</font></b>
+
+116
+00:06:09,536 --> 00:06:12,339
+<b><font size="8" color="#ffffff">No, he died before he could see the
+result.</font></b>
+
+117
+00:06:12,572 --> 00:06:13,306
+<b><font size="8" color="#ffffff">That's different.</font></b>
+
+118
+00:06:14,808 --> 00:06:15,775
+<b><font size="8" color="#ffffff">He picked you.</font></b>
+
+119
+00:06:16,343 --> 00:06:20,747
+<b><font size="8" color="#ffffff">You and the other one, Jero, took
+you up the rail, taught you to see</font></b>
+
+120
+00:06:20,747 --> 00:06:22,515
+<b><font size="8" color="#ffffff">the weep as a wound.</font></b>
+
+121
+00:06:22,749 --> 00:06:25,652
+<b><font size="8" color="#ffffff">That was him sending the
+experiment forward.</font></b>
+
+122
+00:06:25,652 --> 00:06:27,287
+<b><font size="8" color="#ffffff">I lied.</font></b>
+
+123
+00:06:28,621 --> 00:06:33,293
+<b><font size="8" color="#ffffff">When they asked what I saw, I said
+it looked natural.</font></b>
+
+124
+00:06:34,594 --> 00:06:37,230
+<b><font size="8" color="#ffffff">So I turned his death into a
+statistic.</font></b>
+
+125
+00:06:38,698 --> 00:06:40,166
+<b><font size="8" color="#ffffff">And then they threw you off a city.</font></b>
+
+126
+00:06:40,967 --> 00:06:41,768
+<b><font size="8" color="#ffffff">Actions.</font></b>
+
+127
+00:06:42,102 --> 00:06:44,404
+<b><font size="8" color="#ffffff">consequences, vibrations.</font></b>
+
+128
+00:06:44,571 --> 00:06:46,740
+<b><font size="8" color="#ffffff">The wave hit you first.</font></b>
+
+129
+00:06:48,8 --> 00:06:49,75
+<b><font size="8" color="#ffffff">Then it hit him.</font></b>
+
+130
+00:06:49,309 --> 00:06:50,110
+<b><font size="8" color="#ffffff">He jumped.</font></b>
+
+131
+00:06:51,378 --> 00:06:54,180
+<b><font size="8" color="#ffffff">That's the Bond answering the
+question Meldon asked.</font></b>
+
+132
+00:06:55,448 --> 00:06:57,150
+<b><font size="8" color="#ffffff">You knew him?</font></b>
+
+133
+00:07:00,987 --> 00:07:04,591
+<b><font size="8" color="#ffffff">Not his face, but you know more
+about him than most people in the</font></b>
+
+134
+00:07:04,591 --> 00:07:05,291
+<b><font size="8" color="#ffffff">upper tiers.</font></b>
+
+135
+00:07:07,861 --> 00:07:10,497
+<b><font size="8" color="#ffffff">I liked the idea of him.</font></b>
+
+136
+00:07:11,331 --> 00:07:16,169
+<b><font size="8" color="#ffffff">A man in a room full of cowards,
+insisting the experiment could</font></b>
+
+137
+00:07:16,169 --> 00:07:17,537
+<b><font size="8" color="#ffffff">still be humane.</font></b>
+
+138
+00:07:17,871 --> 00:07:18,738
+<b><font size="8" color="#ffffff">That's very rare.</font></b>
+
+139
+00:07:23,176 --> 00:07:24,811
+<b><font size="8" color="#ffffff">Did I know him?</font></b>
+
+140
+00:07:25,845 --> 00:07:26,913
+<b><font size="8" color="#ffffff">I knew his impact.</font></b>
+
+141
+00:07:27,714 --> 00:07:29,449
+<b><font size="8" color="#ffffff">I heard the note he struck.</font></b>
+
+142
+00:07:29,716 --> 00:07:31,384
+<b><font size="8" color="#ffffff">It was clearer than most.</font></b>
+
+143
+00:07:33,386 --> 00:07:37,924
+<b><font size="8" color="#ffffff">For all we're taught, it never
+once occurred to me that anything</font></b>
+
+144
+00:07:37,924 --> 00:07:38,591
+<b><font size="8" color="#ffffff">about him...</font></b>
+
+145
+00:07:43,196 --> 00:07:45,932
+<b><font size="8" color="#ffffff">the experiment could still be
+humane.</font></b>
+
+146
+00:07:46,332 --> 00:07:47,200
+<b><font size="8" color="#ffffff">That's very rare.</font></b>
+
+147
+00:07:51,638 --> 00:07:53,206
+<b><font size="8" color="#ffffff">Did I know him?</font></b>
+
+148
+00:07:54,240 --> 00:07:55,275
+<b><font size="8" color="#ffffff">I knew his impact.</font></b>
+
+149
+00:07:56,176 --> 00:07:57,844
+<b><font size="8" color="#ffffff">I heard the note he struck.</font></b>
+
+150
+00:07:58,78 --> 00:07:59,846
+<b><font size="8" color="#ffffff">It was clearer than most.</font></b>
+
+151
+00:08:01,848 --> 00:08:06,419
+<b><font size="8" color="#ffffff">For all we're taught, it never
+once occurred to me that anything</font></b>
+
+152
+00:08:06,419 --> 00:08:06,986
+<b><font size="8" color="#ffffff">about him...</font></b>
+
