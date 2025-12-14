@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop · World of Tethys</title>
+  <meta name="description" content="Grab Signals downloads, tier memberships, and merch-ready preorders from a single World of Tethys shop page secured by Stripe.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+  {% set currentNav = 'shop' %}
+  {% set navActive = currentNav %}
+  {% include "partials/site-nav.njk" %}
+  {% import "partials/nav.njk" as nav %}
+
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="field-hero">
+      <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <header class="hero-shell">
+          <div class="space-y-3">
+            <p class="eyebrow">World of Tethys · Shop</p>
+            <h1 class="font-display text-4xl font-semibold text-slate-50">Every Tethys artifact in one hangar</h1>
+            <p class="text-sm text-slate-300 max-w-3xl">
+              Downloads, memberships, and future merch all stage here. Stripe handles the checkout flow,
+              while teasers still live across the site so readers bump into new lore everywhere.
+            </p>
+            <div class="grid gap-4 text-xs text-slate-300 sm:grid-cols-3">
+              <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Digital dispatches</p>
+                <p class="mt-1 text-slate-100">Signals MP3 + PDF bundles.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Membership tiers</p>
+                <p class="mt-1 text-slate-100">Watcher’s Crescent → Tethysian Gods.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Merch queue</p>
+                <p class="mt-1 text-slate-100">Prints, apparel, and field kits lining up.</p>
+              </div>
+            </div>
+          </div>
+          {% set shopNav = [
+            { id: 'downloads', label: 'Digital', href: '#downloads' },
+            { id: 'memberships', label: 'Memberships', href: '#memberships' },
+            { id: 'merch', label: 'Merch & extras', href: '#merch' }
+          ] %}
+          {{ nav.render('downloads', shopNav, 'flex flex-wrap gap-3', false) }}
+        </header>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-6xl px-4 py-12 space-y-12 sm:px-6 lg:px-8">
+      <section id="downloads" class="space-y-5">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="section-label">Digital downloads</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Signals ready-to-play files</h2>
+          </div>
+          <p class="text-sm text-slate-400 max-w-xl">Hosted by Stripe · delivered as MP3 + PDF + lore card bundle.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-lava-200">Episode 01</p>
+              <h3 class="font-display text-2xl font-semibold text-slate-50">Ravel Tracks Stryker</h3>
+              <p class="mt-2 text-sm text-slate-300">Single dispatch download with narration, score stems, and the Ashwing sigil postcard.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• Includes MP3 + PDF + lore notes.</li>
+                <li>• Instant download + email receipt.</li>
+                <li>• Licensed for personal use.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <stripe-buy-button
+                buy-button-id="buy_btn_1Sci2SLW0kz6xhQEO1152hKU"
+                publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+              >
+              </stripe-buy-button>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">Episodes 1–3</p>
+              <h3 class="font-display text-2xl font-semibold text-slate-50">Signals starter bundle</h3>
+              <p class="mt-2 text-sm text-slate-300">Three dispatches, liner notes, and spoiler-safe art cards locked at $2.49.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• 3x audio files + transcripts.</li>
+                <li>• Behind-the-mic breakdown PDF.</li>
+                <li>• Free upgrade when Episode 04 drops.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <stripe-buy-button
+                buy-button-id="buy_btn_1SciYaLW0kz6xhQEFsF3pGkp"
+                publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+              >
+              </stripe-buy-button>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Custom checkout</p>
+              <h3 class="font-display text-2xl font-semibold text-slate-50">Signals Payment Element</h3>
+              <p class="mt-2 text-sm text-slate-300">Need invoices, payment intents, or bundles beyond episode 3? Use the full checkout flow.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• Card, wallet, and Link support.</li>
+                <li>• Swappable tiers from the dropdown.</li>
+                <li>• Redirects back to Signals HQ.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <a href="signals-checkout.html" class="cta-primary justify-center">Open checkout console</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="memberships" class="space-y-5">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="section-label">Membership tiers</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Keep Sky City funded monthly</h2>
+          </div>
+          <p class="text-sm text-slate-400 max-w-xl">Each tier unlocks Signals drops, lore vault access, and private Discord beacons.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-amber-200">Light tier · $2/mo</p>
+              <h3 class="font-display text-xl font-semibold text-slate-50">Watcher’s Crescent</h3>
+              <p class="mt-2 text-sm text-slate-300">Early Signals audio, inbox lore postcards, and priority watchlist approvals.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• 48-hour head start on releases.</li>
+                <li>• Quarterly worldbuilding PDFs.</li>
+                <li>• Credit roll shout-outs.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <stripe-buy-button
+                buy-button-id="buy_btn_1Sci9DLW0kz6xhQECEesQvSM"
+                publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+              >
+              </stripe-buy-button>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-rose-200">Core tier · $5/mo</p>
+              <h3 class="font-display text-xl font-semibold text-slate-50">Stryker’s Squad</h3>
+              <p class="mt-2 text-sm text-slate-300">Monthly AMAs, dispatch annotations, and live craft breakdowns from the field team.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• Dispatch vault downloads.</li>
+                <li>• Invite-only Discord thread.</li>
+                <li>• Merch coupons when drops launch.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <stripe-buy-button
+                buy-button-id="buy_btn_1Sci5gLW0kz6xhQEfOUpZIwa"
+                publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+              >
+              </stripe-buy-button>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-4 p-5">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-sky-200">Top tier · $11/mo</p>
+              <h3 class="font-display text-xl font-semibold text-slate-50">Tethysian Gods & Goddesses</h3>
+              <p class="mt-2 text-sm text-slate-300">Everything above plus quarterly merch, editorial votes, and live lore workshops.</p>
+              <ul class="mt-3 space-y-1 text-xs text-slate-400">
+                <li>• VIP office hours.</li>
+                <li>• Early access to cover art + audio masters.</li>
+                <li>• Seat on beta reader panel.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+              <a href="https://buy.stripe.com/00wcN69dEcz4aGBgxYgMw03" target="_blank" rel="noopener noreferrer sponsored" class="cta-primary justify-center">
+                Join the pantheon
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="merch" class="space-y-5">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="section-label">Merch & extras</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Prep the physical drops</h2>
+          </div>
+          <p class="text-sm text-slate-400 max-w-xl">Sign up for alerts so you’re the first to grab prints, apparel, and annotated kits.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card-shell flex h-full flex-col p-5">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Map prints</p>
+            <h3 class="font-display text-xl font-semibold text-slate-50">Volcano & river atlas</h3>
+            <p class="mt-2 text-sm text-slate-300">Foil-layered prints showing Sky City decks, Silurian river routes, and Younger Woods anomalies.</p>
+            <ul class="mt-3 space-y-1 text-xs text-slate-400">
+              <li>• 18x24 giclée + metallic highlights.</li>
+              <li>• Annotated legend + lore citations.</li>
+              <li>• Ships flat from Providence.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <a href="https://shop.worldoftethys.com" target="_blank" rel="noopener noreferrer" class="nav-link--ghost justify-center text-lava-200">Get print alerts</a>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col p-5">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Apparel</p>
+            <h3 class="font-display text-xl font-semibold text-slate-50">Ashwing flight jackets</h3>
+            <p class="mt-2 text-sm text-slate-300">Soft-shell jackets with tonal embroidery + glow ink referencing Ravel’s synesthesia notes.</p>
+            <ul class="mt-3 space-y-1 text-xs text-slate-400">
+              <li>• XS–4X fit grid.</li>
+              <li>• Embroidered crest + reflective seams.</li>
+              <li>• Preorders unlock with 250 interested readers.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <a href="https://www.etsy.com/shop/worldoftethys" target="_blank" rel="noopener noreferrer" class="nav-link--ghost justify-center text-slate-200">Join Etsy waitlist</a>
+            </div>
+          </article>
+
+          <article class="card-shell flex h-full flex-col p-5">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Field kits</p>
+            <h3 class="font-display text-xl font-semibold text-slate-50">Lore cards & audio USBs</h3>
+            <p class="mt-2 text-sm text-slate-300">Collector tins with etched USB drives, herb cards from Ravel’s lab, and QR codes to bonus audio.</p>
+            <ul class="mt-3 space-y-1 text-xs text-slate-400">
+              <li>• Limited run of 300 per drop.</li>
+              <li>• Numbered certificates + signature.</li>
+              <li>• International shipping via Pirate Ship.</li>
+            </ul>
+            <div class="mt-auto pt-4">
+              <a href="https://dcbarletta.substack.com" target="_blank" rel="noopener noreferrer" class="nav-link--ghost justify-center text-slate-200">Substack merch ping</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card-shell p-6 space-y-4">
+        <div class="space-y-2">
+          <p class="section-label">Outbound store fronts</p>
+          <h2 class="font-display text-2xl font-semibold text-slate-50">Prefer the big platforms?</h2>
+        </div>
+        <p class="text-sm text-slate-300">Signals and Sky City also live on mainstream marketplaces for easier discovery.</p>
+        <ul class="grid gap-3 text-sm text-slate-200 md:grid-cols-2">
+          <li class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <a href="https://www.amazon.com/author/dcbarletta" target="_blank" rel="noopener noreferrer sponsored" class="font-semibold text-slate-50">Amazon Author Central</a>
+            <p class="mt-1 text-xs text-slate-400">Kindle preorders, paperback proofs, and merch bundles handled by Amazon Print on Demand.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <a href="https://www.audible.com/author/dcbarletta" target="_blank" rel="noopener noreferrer sponsored" class="font-semibold text-slate-50">Audible Showcase</a>
+            <p class="mt-1 text-xs text-slate-400">Signals episodes with full mixing + immersive SFX for listeners who prefer Audible credits.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <a href="https://www.patreon.com/c/WorldofTethysDCBarletta" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-50">Patreon HQ</a>
+            <p class="mt-1 text-xs text-slate-400">Weekly posts, raw drafts, and AMAs mirrored for fans who already support creators on Patreon.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <a href="https://dcbarletta.substack.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-50">Substack Dispatches</a>
+            <p class="mt-1 text-xs text-slate-400">Research logs + Signal transcripts optimized for inbox reading with automatic RSS feeds.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner items-center justify-center text-center">
+        <p class="text-xs leading-relaxed text-slate-400">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./public/tethys-links.js" defer></script>
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <script src="./public/tethys-effects.js" defer></script>
+</body>
+</html>

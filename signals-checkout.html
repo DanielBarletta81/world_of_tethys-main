@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signals Checkout · World of Tethys</title>
+  <meta name="description" content="Secure Stripe Payment Element checkout for Signals from Tethys episodes and bundles. Plug in your publishable key and start selling dispatches directly.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+<div class="site-nav-bar">
+  <div class="site-nav">
+    <a href="index.html" class="site-nav__brand">
+      <img src="./public/images/new_cover.png" alt="World of Tethys crest" class="site-nav__logo" loading="lazy">
+      <span class="site-nav__wordmark">World of <span>Tethys</span></span>
+    </a>
+      <nav class="site-nav__links">
+      <a href="index.html" class="nav-pill">Home</a>
+      <a href="world-of-tethys.html" class="nav-pill">World</a>
+      <a href="/books-2" class="nav-pill">Books</a>
+      <a href="shop.html" class="nav-pill">Shop</a>
+      <a href="/characters" class="nav-pill">Characters</a>
+      <a href="/real-science" class="nav-pill">Real Science</a>
+      <a href="/comments" class="nav-pill">Comments</a>
+      <a href="/signals-from-thethys" class="nav-pill nav-pill--active" aria-current="page">Signals</a>
+      <a href="reading-room.html" class="nav-pill">Reading Room</a>
+      <a href="support.html" class="nav-pill">Support</a>
+      <a href="about.html" class="nav-pill">About</a>
+      <a href="https://dcbarletta.substack.com" class="nav-pill" target="_blank" rel="noopener noreferrer">Join the Watchlist</a>
+  </nav>
+
+  </div>
+</div>
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="field-hero">
+      <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+        <header class="hero-shell">
+          <div class="space-y-3">
+            <p class="eyebrow">Signals from Tethys · Checkout</p>
+            <h1 class="font-display text-3xl font-semibold text-slate-50">Grab the next dispatch</h1>
+            <p class="text-sm text-slate-300">
+              This page embeds Stripe’s Payment Element so you can sell Signals directly on-site. Wire it to your backend endpoint
+              that creates PaymentIntents (see notes below), drop in your publishable key, and you’re live.
+            </p>
+          </div>
+            <nav class="mt-6 flex flex-wrap gap-3">
+      <a href="/signals-from-thethys" class="nav-pill nav-pill--active" aria-current="page">Signals</a>
+      <a href="support.html" class="nav-pill">Support</a>
+      <a href="/comments" class="nav-pill">Comments</a>
+  </nav>
+
+        </header>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 space-y-8">
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Choose your Signals bundle</h2>
+        <form id="product-form" class="grid gap-4 text-sm text-slate-300 md:grid-cols-2">
+          <label class="flex items-center gap-3 rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <input type="radio" name="productId" value="signals_ep01" class="text-lava-400" checked>
+            <div>
+              <p class="text-slate-100 font-semibold">Episode 01 · Ravel Tracks Stryker</p>
+              <p class="text-xs text-slate-400">$0.99 · single dispatch</p>
+            </div>
+          </label>
+          <label class="flex items-center gap-3 rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+            <input type="radio" name="productId" value="signals_bundle" class="text-lava-400">
+            <div>
+              <p class="text-slate-100 font-semibold">Signals Bundle · First 3 episodes</p>
+              <p class="text-xs text-slate-400">$2.49 · unlocks 3 files</p>
+            </div>
+          </label>
+        </form>
+      </section>
+
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Secure checkout</h2>
+        <div id="payment-status" class="text-sm text-emerald-300 hidden"></div>
+        <form id="payment-form" class="space-y-4">
+          <div id="payment-element" class="rounded-2xl border border-slate-800/70 bg-slate-950/70 p-4"></div>
+          <button id="submit" class="cta-primary w-full justify-center" type="submit">
+            <span id="button-text">Pay now</span>
+          </button>
+          <p class="text-xs text-center text-slate-500">
+            Powered by Stripe. Replace the placeholder publishable key + backend endpoint before going live.
+          </p>
+        </form>
+      </section>
+
+
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Or tap the hosted Stripe button</h2>
+        <p class="text-sm text-slate-300">Grab Episode 01 instantly using Stripe’s hosted buy button—no form, no fuss.</p>
+        <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+          
+        </div>
+      </section>
+
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Bundle Episodes 1–3 · $2.49</h2>
+        <p class="text-sm text-slate-300">Prefer to grab the first three dispatches at once? Use the hosted Stripe button below.</p>
+        <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SciYaLW0kz6xhQEFsF3pGkp"
+            publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+          >
+          </stripe-buy-button>
+        </div>
+      </section>
+
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Join Stryker’s Squad · $5/mo</h2>
+        <p class="text-sm text-slate-300">
+          Get monthly Signals drops, behind-the-mic notes, and quarterly Q&A invites through a site-exclusive subscription tier.
+        </p>
+        <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1Sci5gLW0kz6xhQEfOUpZIwa"
+            publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+          >
+          </stripe-buy-button>
+        </div>
+      </section>
+
+      <section class="card-shell p-6 space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-slate-50">Watcher’s Crescent · $2/mo</h2>
+        <p class="text-sm text-slate-300">
+          Light tier for early Signals access, lore pings, and first-look emails when new dispatches drop.
+        </p>
+        <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1Sci9DLW0kz6xhQECEesQvSM"
+            publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+          >
+          </stripe-buy-button>
+        </div>
+      </section>
+
+      <section class="card-shell p-6 space-y-5 text-sm text-slate-300">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="section-label">Support the signal</p>
+            <h2 class="font-display text-2xl font-semibold text-slate-50">Pick a tier that fits</h2>
+            <p class="mt-2">Each tier stacks perks across Patreon, Substack, and these hosted Stripe buttons.</p>
+          </div>
+        </div>
+        <div class="grid gap-3 md:grid-cols-3">
+          <a data-link="watchersCrescentStripe" data-new-tab="true" class="tier-pill" style="--tier-color: 255, 127, 92;">
+            <span class="tier-pill__label">Watcher’s Crescent</span>
+            <span class="tier-pill__price">$2/mo</span>
+            <span class="tier-pill__perk">Early Signals access + lore pings</span>
+          </a>
+          <a data-link="strykersSquadStripe" data-new-tab="true" class="tier-pill" style="--tier-color: 249, 168, 212;">
+            <span class="tier-pill__label">Stryker’s Squad</span>
+            <span class="tier-pill__price">$5/mo</span>
+            <span class="tier-pill__perk">Dispatch downloads + Q&A invites</span>
+          </a>
+          <a data-link="tethysianGodsStripe" data-new-tab="true" class="tier-pill" style="--tier-color: 191, 219, 254;">
+            <span class="tier-pill__label">Tethysian Gods & Goddesses</span>
+            <span class="tier-pill__price">$11/mo</span>
+            <span class="tier-pill__perk">All perks plus VIP lore drops</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner items-center justify-center text-center">
+        <p class="text-xs leading-relaxed text-slate-400">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <script src="./public/tethys-effects.js" defer></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script type="module">
+    const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_KEY';
+    const CREATE_INTENT_ENDPOINT = '/create-payment-intent';
+
+    const stripe = window.Stripe(STRIPE_PUBLISHABLE_KEY);
+    const elements = stripe.elements();
+    let paymentElement;
+    let clientSecret;
+
+    const productForm = document.getElementById('product-form');
+    const paymentForm = document.getElementById('payment-form');
+    const paymentStatus = document.getElementById('payment-status');
+    const submitButton = document.getElementById('submit');
+    const buttonText = document.getElementById('button-text');
+
+    async function initializePaymentElement(selectedProduct) {
+      submitButton.disabled = true;
+      buttonText.textContent = 'Loading checkout…';
+      paymentStatus?.classList.add('hidden');
+      paymentStatus && (paymentStatus.textContent = '');
+
+      const payload = {
+        productId: selectedProduct
+      };
+
+      const response = await fetch(CREATE_INTENT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Unable to create payment intent');
+      }
+
+      const data = await response.json();
+      clientSecret = data.clientSecret;
+
+      if (paymentElement) {
+        paymentElement.unmount();
+      }
+
+      const appearance = {
+        theme: 'night',
+        labels: 'floating',
+        variables: {
+          colorBackground: '#050914',
+          colorPrimary: '#f97316'
+        }
+      };
+
+      paymentElement = elements.create('payment', {
+        clientSecret,
+        appearance
+      });
+      paymentElement.mount('#payment-element');
+
+      submitButton.disabled = false;
+      buttonText.textContent = 'Pay now';
+    }
+
+    productForm?.addEventListener('change', (event) => {
+      if (event.target.name === 'productId') {
+        initializePaymentElement(event.target.value).catch((err) => {
+          paymentStatus?.classList.remove('hidden');
+          paymentStatus && (paymentStatus.textContent = err.message);
+          submitButton.disabled = false;
+          buttonText.textContent = 'Pay now';
+        });
+      }
+    });
+
+    paymentForm?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!clientSecret) return;
+      submitButton.disabled = true;
+      buttonText.textContent = 'Processing…';
+
+      const { error } = await stripe.confirmPayment({
+        elements,
+        clientSecret,
+        confirmParams: {
+          return_url: window.location.origin + '/signals-from-thethys'
+        }
+      });
+
+      if (error) {
+        paymentStatus?.classList.remove('hidden');
+        paymentStatus && (paymentStatus.textContent = error.message || 'Payment failed.');
+        submitButton.disabled = false;
+        buttonText.textContent = 'Pay now';
+      }
+    });
+
+    const defaultProduct = productForm?.querySelector('input[name="productId"]:checked')?.value;
+    if (defaultProduct) {
+      initializePaymentElement(defaultProduct).catch((err) => {
+        paymentStatus?.classList.remove('hidden');
+        paymentStatus && (paymentStatus.textContent = err.message);
+        submitButton.disabled = false;
+        buttonText.textContent = 'Pay now';
+      });
+    }
+  </script>
+</body>
+</html>

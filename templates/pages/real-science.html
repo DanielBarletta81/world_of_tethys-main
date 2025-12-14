@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Science · World of Tethys</title>
+  <meta name="description" content="Rhode Island estuary work, algae lab notes, and Cretaceous research that power the World of Tethys saga. Explore the real science behind Sky City and the Signals dispatches.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+  {% set currentNav = 'real-science' %}
+  {% set navActive = currentNav %}
+  {% include "partials/site-nav.njk" %}
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+      <header class="mb-10 rounded-3xl border border-slate-800/70 bg-slate-950/80 p-6 shadow-soft-bronze">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="eyebrow">World of Tethys · Research log</p>
+            <h1 class="font-display text-4xl font-semibold text-slate-50">The real science fueling the saga</h1>
+            <p class="mt-2 max-w-3xl text-sm text-slate-300">
+              Rhode Island estuaries, algae lab work, and Cretaceous-era field notes all bleed into Sky City and the Signals dispatches.
+              This page is the lab journal—showing the freshwater and saltwater studies, oyster resilience research, and paleontology references
+              that keep the fiction grounded.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="space-y-12">
+        <section class="grid gap-6 md:grid-cols-2">
+          <article class="card-shell p-6">
+            <p class="section-label">Field research</p>
+            <h2 class="mt-3 font-display text-3xl text-slate-50">Rhode Island estuaries & lab benches</h2>
+            <p class="mt-3 text-sm text-slate-300">
+              My master’s thesis focused on oysters and estuary resilience around Rhode Island. I ran freshwater and saltwater fish surveys,
+              monitored algae blooms from Block Island to Narragansett Bay, and documented how cell walls react under pressure. Those data sets
+              became the technical backbone of Thal estuaries, bonded-creature biology, and the filtration rigs you meet in Sky City.
+            </p>
+            <div class="mt-5 grid gap-3 text-xs text-slate-300 md:grid-cols-2">
+              <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Focus</p>
+                <p class="mt-1 font-semibold text-slate-100">Oyster resilience & salinity shifts</p>
+                <p class="mt-1">Informing river-clan filtration towers + loyalty tests for bonded creatures.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Lab work</p>
+                <p class="mt-1 font-semibold text-slate-100">Algae & cell wall dynamics</p>
+                <p class="mt-1">Used for Stryker’s healing sequences + Sky City’s bioelectric soft armor.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-shell p-0 overflow-hidden">
+            <figure class="relative h-full w-full">
+              <img src="./public/images/input.jpg" alt="Rhode Island estuary survey" class="h-full w-full object-cover">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-sm text-slate-200">
+                Field notes from Rhode Island surveys feed the Thal estuary chapters and the Signals dispatches.
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+
+        <section>
+          <div class="flex flex-col gap-2">
+            <p class="section-label">Gallery · swap with your media</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">From research boats to Cretaceous seas</h2>
+          </div>
+          <div class="mt-6 grid gap-4 md:grid-cols-[2fr_1fr]">
+            <figure class="card-shell overflow-hidden rounded-3xl bg-slate-950/70">
+              <img src="./public/images/volcano-bg.png" alt="Boat wake near Rhode Island research sites" class="h-full w-full object-cover">
+              <figcaption class="p-4 text-sm text-slate-300">Block Island wake studies → informs the cliffside water elevators in Sky City.</figcaption>
+            </figure>
+            <div class="grid gap-4">
+              <figure class="card-shell overflow-hidden bg-slate-950/70">
+                <img src="./public/images/cover_acx.jpg" alt="Microscope imagery" class="h-48 w-full object-cover">
+                <figcaption class="p-3 text-xs text-slate-400">Microscopy of algae + shell matrices → Stryker’s armor + Tethys coral tech.</figcaption>
+              </figure>
+              <figure class="card-shell overflow-hidden bg-slate-950/70">
+                <img src="./public/images/input.jpg" alt="Fossil reference" class="h-48 w-full object-cover object-center">
+                <figcaption class="p-3 text-xs text-slate-400">Cretaceous Tethys Sea fossils → creatures haunting Younger Woods & shelf arcs.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-6">
+          <div class="flex flex-col gap-2">
+            <p class="section-label">Research notebooks</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Translating lab data into lore</h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <article class="card-shell p-5 text-sm text-slate-300">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-lava-200">Estuaries · Thesis</p>
+              <h3 class="mt-1 text-xl font-semibold text-slate-50">Oysters vs. Sky City runoff</h3>
+              <p class="mt-2">Real sediment load tests around Rhode Island became the model for how Sky City poisons the rivers below.
+                Igzier’s exile storyline taps directly into these datasets, forcing tech fixes that mirror actual mitigation strategies.</p>
+            </article>
+            <article class="card-shell p-5 text-sm text-slate-300">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-lava-200">Fish surveys · Fieldwork</p>
+              <h3 class="mt-1 text-xl font-semibold text-slate-50">Freshwater & saltwater scouting</h3>
+              <p class="mt-2">Species logged off Rhode Island—striped bass, fluke, alewife—inform the hybrid creatures inside Tethys.
+                The Signals dispatches borrow entire behaviors from those nocturnal runs.</p>
+            </article>
+            <article class="card-shell p-5 text-sm text-slate-300">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-lava-200">Algae · Cell walls</p>
+              <h3 class="mt-1 text-xl font-semibold text-slate-50">Molecular scaffolding</h3>
+              <p class="mt-2">Cell wall stress tests become the blueprint for bonded-creature regeneration, and the way Watchers weave bioelectric nets
+                during ashstorms.</p>
+            </article>
+            <article class="card-shell p-5 text-sm text-slate-300">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-lava-200">Cretaceous Tethys Sea</p>
+              <h3 class="mt-1 text-xl font-semibold text-slate-50">Archaic tides & megafauna</h3>
+              <p class="mt-2">Paleontology dives supply silhouettes for the creatures that stalk the Younger Woods; every Signals fight scene has a fossil ancestor.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card-shell p-6">
+          <div class="flex flex-col gap-2">
+            <p class="section-label">Field timeline</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Where the fiction borrowed its bones</h2>
+          </div>
+          <ol class="mt-4 space-y-4 border-l border-slate-800/60 pl-6 text-sm text-slate-300">
+            <li>
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Narragansett Bay · Estuary log</p>
+              <p class="font-semibold text-slate-100">Testing oyster filtration after rain bombs → inspired the Thal loyalty trials.</p>
+            </li>
+            <li>
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Block Island · Boat run</p>
+              <p class="font-semibold text-slate-100">Storm-front algae bloom becomes the ashstorm that Ravel documents in Signals 01.</p>
+            </li>
+            <li>
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Laboratory bench · Microscopy</p>
+              <p class="font-semibold text-slate-100">Cell wall fractures inform how bonded creatures scar and heal mid-flight.</p>
+            </li>
+            <li>
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Cretaceous papers · Tethys Sea</p>
+              <p class="font-semibold text-slate-100">Silhouettes for the cliffside leviathans + the Watcher that hunts Igzier.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="card-shell p-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div class="space-y-3">
+            <p class="section-label">Stay synced</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Get the lab notes before launch</h2>
+            <p class="text-sm text-slate-300">
+              Join the Tethys watchlist for research drops, annotated field cards, and pre-release Signals dispatches.
+              Patreon + Substack get the raw lab photos and molecular breakdowns first.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 md:w-72">
+            <a href="https://dcbarletta.substack.com" class="cta-primary" target="_blank" rel="noopener noreferrer">Join the watchlist</a>
+            <a href="https://www.patreon.com/c/WorldofTethysDCBarletta" data-link="patreon" data-new-tab="true" class="nav-link--ghost justify-center text-slate-200" rel="noopener noreferrer">Go to Patreon</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner items-center justify-center text-center">
+        <p class="text-xs leading-relaxed text-slate-400">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="./public/tethys-links.js" defer></script>
+  <script src="./public/tethys-effects.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+Love this step—this is where it starts feeling like a real “universe hub” instead of a random site.
+
+Here’s a **clean, future-proof IA** with:
+
+* Main nav labels
+* Their URL slugs
+* Key child slugs (characters, science, etc.)
+* Notes for later Amazon / book-store push
+
+You can copy this straight into WordPress page slugs & menu labels.
+
+---
+
+## 🔝 Main Navigation
+
+**1. Home**
+
+* **Label:** `World of Tethys`
+* **Slug / URL:** `/` (your homepage)
+* **What lives here:**
+  The volcano-lit landing page we built (hero, world, cast, media, updates).
+
+---
+
+**2. World**
+
+* **Label:** `World`
+* **Slug:** `/world`
+* **Use:** High-level setting page (Sky City, Watcher, Younger Woods, Tethys Sea, Silurians, Pteros Island).
+* **Optional child sections (anchors, not separate pages yet):**
+
+  * `/world#sky-city`
+  * `/world#younger-woods`
+  * `/world#tethys-sea`
+  * `/world#river-clans`
+
+You can also just keep the “World of Tethys” section on the homepage and have `/world` redirect to `/#world` if you want to stay ultra-simple.
+
+---
+
+**3. Characters**
+
+* **Label:** `Characters`
+* **Slug:** `/characters`
+* **Use:** Simple index page (grid or list) linking to each character profile.
+
+**Child pages (character slugs):**
+
+* Igzier → `/characters/igzier`
+* Stryker → `/characters/stryker`
+* Karys → `/characters/karys`
+* Ravel → `/characters/ravel`
+* Jairo → `/characters/jairo`
+* Melden → `/characters/melden`
+
+Later, if you add more (Silurian POVs, etc.), just continue under `/characters/...`.
+
+---
+
+**4. Science**
+
+* **Label:** `Science of Tethys`
+* **Slug:** `/science-of-tethys`
+* **Use:** Your earth science / paleontology / ecology / evolution page.
+
+Within that page, use anchors for sections:
+
+* `/science-of-tethys#earth-science`
+* `/science-of-tethys#paleontology`
+* `/science-of-tethys#ecology`
+* `/science-of-tethys#evolution`
+
+This is your “biologist brain” hub, where you can drop diagrams, nerd explanations, and link out to relevant YouTube vids.
+
+---
+
+**5. Media**
+
+* **Label:** `Media`
+* **Slug:** `/media`
+* **Use:** Central hub for trailers, Ravel monologues, scene VO, playlists.
+
+Inside that page, you can group:
+
+* `Trailers` → embedded YouTube videos
+* `Ravel & Igzier` → your conversations / monologues
+* `Creatures & World` → Stryker, plesiosaur/pliosaur, map videos
+
+You’ll mostly link out to:
+
+* YouTube: `https://www.youtube.com/@worldoftethysauthor`
+* TikTok: `https://www.tiktok.com/@worldoftethys_writer`
+* IG: `https://www.instagram.com/worldoftethys`
+
+---
+
+**6. Updates**
+
+* **Label:** `Updates`
+* **Slug:** `/updates`
+* **Use:** A simple blog-style page or static “Status” card.
+
+Sections you can keep updated:
+
+* Book 1: Sky City – **In edits**
+* Next: **ARC / preorder** (when Amazon is ready)
+* What’s new: latest trailer, latest character page, latest science note.
+
+You can re-use the “Tethys Ledger” block from the landing page here.
+
+---
+
+**7. Books** (future-proof)
+
+You don’t need content here yet, but **reserve the slug now**:
+
+* **Label:** `Books`
+* **Slug:** `/books`
+* **Use now:** A simple “Book 1 in edits” status + email signup.
+* **Use later:**
+
+  * Book cards that link to Amazon / other stores
+  * “Ask your bookstore to order” info once it’s in catalogs
+
+Child slugs you can plan for:
+
+* `/books/sky-city`
+* `/books/book-2` (placeholder)
+* `/books/prequel` (placeholder)
+
+For now, you can hide this from the main nav and add it once you’re closer to Amazon launch—or keep it visible with a “Coming soon” vibe.
+
+---
+
+## 🔧 Quick WordPress Setup Checklist
+
+1. **Create pages with these slugs:**
+
+   * `/world-of-tethys` (optional, set this as homepage or just your root `/`)
+   * `/world`
+   * `/characters`
+   * `/science-of-tethys`
+   * `/media`
+   * `/updates`
+   * `/books` (even if just a “coming soon” line for now)
+2. **Create child character pages under `/characters`:**
+
+   * Igzier, Stryker, Ravel, Karys, Jairo, Melden.
+3. **Go to Appearance → Menus →**
+
+   * Add: `World of Tethys` (Home), `World`, `Characters`, `Science of Tethys`, `Media`, `Updates`.
+   * Add `Books` whenever you’re ready (or now with a “coming soon” badge in the page body).
+
+If you want, next we can:
+
+* Flesh out the **generic Characters index page** (`/characters`) so it nicely lists each character with tiny blurb + “View profile”, or
+* Write the **Books page** in “coming soon, ask your bookstore” language that can later expand into full buy links without rewriting everything.

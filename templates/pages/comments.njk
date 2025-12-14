@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments · World of Tethys</title>
+  <meta name="description" content="Leave lightweight, spoiler-aware notes about Sky City chapters and Signals dispatches. Comments save locally and keep the community signal clean.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+  {% set currentNav = 'comments' %}
+  {% set navActive = currentNav %}
+  {% include "partials/site-nav.njk" %}
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <header class="hero-shell">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="space-y-3">
+            <p class="eyebrow">Signal Relay · Comments</p>
+            <h1 class="font-display text-4xl font-semibold text-slate-50">Tell the Circle what you felt</h1>
+            <p class="max-w-3xl text-sm text-slate-300">
+              Drop reactions to the Signals dispatches, Sky City chapters, or the research that inspired them. This feed is lightweight, spoiler-friendly,
+              and saves locally so you can jot thoughts even when you’re offline.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="space-y-10">
+        <section class="card-shell p-6 space-y-6">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="section-label">Signal relay</p>
+              <h2 class="font-display text-3xl font-semibold text-slate-50">Community comments</h2>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <button type="button" class="cta-primary" data-open-comment-modal>Leave a comment</button>
+              <a href="https://dcbarletta.substack.com" class="nav-link--ghost text-slate-200" target="_blank" rel="noopener noreferrer">Join the watchlist</a>
+            </div>
+          </div>
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Saved locally · keep backups manually if you clear cookies</p>
+          <div class="space-y-4" data-comments-feed></div>
+          <div class="rounded-2xl border border-slate-800/60 bg-slate-950/40 p-4 text-sm text-slate-400" data-comments-empty hidden>
+            No comments yet. Be the first to log a dispatch by tapping “Leave a comment.”
+          </div>
+        </section>
+
+        <section class="grid gap-5 md:grid-cols-2">
+          <article class="card-shell p-5 space-y-3">
+            <p class="section-label">Guidelines</p>
+            <h3 class="font-display text-2xl text-slate-50">Keep the signal clean</h3>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li>• Light spoilers only—flag major reveals.</li>
+              <li>• Tie your note to a dispatch, chapter, or research drop.</li>
+              <li>• Keep it constructive; this is where experiments get better.</li>
+            </ul>
+          </article>
+          <article class="card-shell p-5 space-y-3">
+            <p class="section-label">More ways in</p>
+            <h3 class="font-display text-2xl text-slate-50">Need full community threads?</h3>
+            <p class="text-sm text-slate-300">
+              Deeper discussion threads live on Patreon and Substack. Tap the CTA below to join the Tethys list and get those invite links instantly.
+            </p>
+            <a href="https://dcbarletta.substack.com" class="cta-primary" target="_blank" rel="noopener noreferrer">Get the invites</a>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="tethys-modal" data-comment-modal aria-hidden="true" role="dialog" aria-label="Leave a comment">
+      <div class="tethys-modal__backdrop" data-modal-backdrop></div>
+      <div class="tethys-modal__panel">
+        <span class="tethys-modal__glow" aria-hidden="true"></span>
+        <button class="tethys-modal__close" data-close-comment-modal aria-label="Close comment modal">&times;</button>
+        <p class="section-label inline-flex">Dispatch note</p>
+        <h2 class="font-display text-2xl text-slate-50 mt-3">Leave a comment</h2>
+        <p class="mt-2 text-sm text-slate-300">
+          Your note saves locally so you can keep polishing it before posting elsewhere.
+        </p>
+        <form class="tethys-modal__form" data-comment-form>
+          <input type="text" name="name" placeholder="Name or call sign" autocomplete="name">
+          <input type="text" name="location" placeholder="Location / faction" autocomplete="organization">
+          <textarea name="message" rows="4" placeholder="What signal are you replying to?" required></textarea>
+          <button type="submit">Save comment</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner items-center justify-center text-center">
+        <p class="text-xs leading-relaxed text-slate-400">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="./public/tethys-links.js" defer></script>
+  <script src="./public/tethys-effects.js" defer></script>
+  <script src="./public/comments.js" defer></script>
+</body>
+</html>

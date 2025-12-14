@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Room · World of Tethys</title>
+  <meta name="description" content="Login with OAuth2 to join the Reading Room—an invite-only chat for respectful lore discussions and media drops.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+<div class="site-nav-bar">
+  <div class="site-nav">
+    <a href="index.html" class="site-nav__brand">
+      <img src="./public/images/new_cover.png" alt="World of Tethys crest" class="site-nav__logo" loading="lazy">
+      <span class="site-nav__wordmark">World of <span>Tethys</span></span>
+    </a>
+      <nav class="site-nav__links">
+      <a href="index.html" class="nav-pill">Home</a>
+      <a href="world-of-tethys.html" class="nav-pill">World</a>
+      <a href="/books-2" class="nav-pill">Books</a>
+      <a href="shop.html" class="nav-pill">Shop</a>
+      <a href="/characters" class="nav-pill">Characters</a>
+      <a href="/real-science" class="nav-pill">Real Science</a>
+      <a href="/comments" class="nav-pill">Comments</a>
+      <a href="/signals-from-thethys" class="nav-pill">Signals</a>
+      <a href="support.html" class="nav-pill">Support</a>
+      <a href="about.html" class="nav-pill">About</a>
+      <a href="https://dcbarletta.substack.com" class="nav-pill" target="_blank" rel="noopener noreferrer">Join the Watchlist</a>
+  </nav>
+
+  </div>
+</div>
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="hero-spectrum">
+      <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+        <header class="hero-shell space-y-4">
+          <p class="section-label">Reading Room</p>
+          <h1 class="font-display text-4xl font-semibold text-slate-50">Secure chat for watchful readers.</h1>
+          <p class="text-sm text-slate-300">Use OAuth2 login to enter the Reading Room, stream previews, and exchange respectful field notes. Messages are rate-limited and moderated, and only authenticated guests can post.</p>
+          <div class="flex flex-wrap gap-3 text-sm" data-session-actions>
+            <a href="/login" class="cta-primary" data-login>Log in</a>
+            <a href="/logout" class="nav-link--ghost" data-logout>Log out</a>
+          </div>
+          <div class="text-xs uppercase tracking-[0.28em] text-slate-400" data-session-state>
+            Checking session…
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
+      <section class="card-shell p-6 space-y-4">
+        <div class="flex flex-col gap-1">
+          <p class="section-label">Live thread</p>
+          <h2 class="font-display text-2xl text-slate-50">Reading Room chat</h2>
+          <p class="text-sm text-slate-400">Keep it spoiler-tag friendly. Messages are visible only to authenticated Watchers.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-800/70 bg-slate-950/70 p-4 space-y-3">
+          <ol class="space-y-3 text-sm" data-reading-room-messages>
+            <li class="text-slate-500">No messages yet.</li>
+          </ol>
+        </div>
+        <form id="reading-room-form" class="space-y-3" autocomplete="off">
+          <label class="text-[11px] uppercase tracking-[0.28em] text-slate-500" for="reading-room-input">Share a note</label>
+          <textarea id="reading-room-input" name="content" class="w-full rounded-2xl border border-slate-800/70 bg-slate-950/70 p-3 text-sm" maxlength="500" placeholder="Respectful lore drops only." required></textarea>
+          <div class="flex flex-wrap gap-3">
+            <button type="submit" class="cta-primary">Post to room</button>
+            <p class="text-xs text-slate-500" data-reading-room-feedback></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner">
+        <div class="space-y-2">
+          <h3 class="text-sm font-semibold text-slate-50">D.C. Barletta</h3>
+          <p class="text-xs text-slate-400">Author & producer of the World of Tethys series. Audio built to ACX professional standards.</p>
+        </div>
+        <div class="social-links">
+          <a data-link="youtube" data-new-tab="true" class="social-link">YT</a>
+          <a data-link="instagram" data-new-tab="true" class="social-link">IG</a>
+          <a data-link="tiktok" data-new-tab="true" class="social-link">TT</a>
+        </div>
+        <p class="text-xs leading-relaxed text-slate-400 text-center lg:ml-auto lg:text-right">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">Reading Room activity may be logged for moderation.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="./public/tethys-links.js" defer></script>
+  <script src="./public/reading-room.js" defer></script>
+</body>
+</html>

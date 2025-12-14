@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signals from Tethys</title>
+  <meta name="description" content="Stream and download Signals from Tethys—premium audio dispatches that expand Sky City lore with ACX-grade soundscapes, Stripe checkout, and SureCart bundles.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+</head>
+<body>
+  {% set currentNav = 'signals' %}
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="field-hero">
+      <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <header class="mb-10 flex flex-col gap-4 rounded-3xl border border-slate-800/60 bg-slate-950/70 p-6 shadow-soft-bronze backdrop-blur">
+          <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div class="flex items-center gap-3">
+              <div class="h-12 w-12 rounded-2xl border border-slate-700/70 bg-slate-900/80 text-center text-2xl leading-[48px] text-lava-200 shadow-soft-bronze">TF</div>
+              <div>
+                <p class="eyebrow">World of Tethys</p>
+                <p class="text-sm text-slate-400">Signals from Tethys · Audio micro-series</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
+            <div class="space-y-4">
+              <p class="section-label">Signals from Tethys</p>
+              <h1 class="font-display text-4xl font-semibold text-slate-50 sm:text-5xl">Hear the Whisper of the Younger Woods</h1>
+              <p class="max-w-2xl text-sm text-slate-300">
+                Exclusive 20-minute Signals from Tethys dispatches captured by scouts, healers, and engineers on the fringes of Sky City.
+                Mastered to ACX standards. Crafted to pull you straight into the hum of the Younger Woods.
+              </p>
+              <a data-link="stripeSignalsEp01" data-new-tab="true" class="cta-primary w-full sm:w-auto">
+                Listen to Episode 1 · $0.99
+              </a>
+              <audio controls class="w-full rounded-2xl border border-slate-800/70 bg-slate-950/70 p-3" data-audio-link="previewSignalsEp01"></audio>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">
+                Secure checkout powered by Stripe Payment Element · SureCart-ready
+              </p>
+              <a data-link="surecartSignals" data-new-tab="true" class="nav-link--ghost inline-flex w-full items-center justify-center text-slate-200 sm:w-auto">
+                Prefer SureCart checkout?
+              </a>
+            </div>
+            <div class="rounded-3xl border border-slate-800/60 bg-slate-950/70 p-5 text-sm text-slate-300 shadow-soft-bronze">
+              <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">What you’ll feel</p>
+              <ul class="mt-3 space-y-2">
+                <li>• Footsteps crunching cooled ash as Ravel listens for root song.</li>
+                <li>• Breathless field notes from engineers hanging over the Weep.</li>
+                <li>• Predator calls looping through volcanic shelves after dark.</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 space-y-12">
+      <section class="space-y-5">
+        <h2 class="font-display text-3xl font-semibold text-slate-50">Deep Dive. Low Commitment.</h2>
+        <p class="max-w-3xl text-sm text-slate-300">
+          Each installment is engineered as a premium, self-contained audio story. Perfect for fans who want more Tethys flavor
+          without committing to a full novel—or for new listeners who want a taste before diving in.
+        </p>
+        <div class="value-grid">
+          <article class="value-card space-y-2">
+            <p class="text-2xl">🎧</p>
+            <h3 class="text-lg font-semibold text-slate-50">Professional narration</h3>
+            <p class="text-sm text-slate-300">Recorded and mastered to audiobook specs so it slides straight into ACX, Audible, or your favorite player.</p>
+          </article>
+          <article class="value-card space-y-2">
+            <p class="text-2xl">🗺️</p>
+            <h3 class="text-lg font-semibold text-slate-50">Untold lore</h3>
+            <p class="text-sm text-slate-300">Every track reveals side missions, creature encounters, and character beats you can’t get anywhere else.</p>
+          </article>
+          <article class="value-card space-y-2">
+            <p class="text-2xl">🪙</p>
+            <h3 class="text-lg font-semibold text-slate-50">Affordable access</h3>
+            <p class="text-sm text-slate-300">Less than a cup of tea. Queue episodes à la carte or bundle them once Season One lands.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="section-label">Season one</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Signals from Tethys</h2>
+          </div>
+          <p class="text-sm text-slate-400">Episodes update monthly. Status data pulls straight from your SureCart releases.</p>
+        </div>
+
+        <div class="episode-grid">
+          <article class="episode-card space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-400">Episode 01</p>
+                <h3 class="text-xl font-semibold text-slate-50">Ravel Tracks Stryker</h3>
+              </div>
+              <span class="status-chip border border-emerald-400/50 bg-emerald-500/20 text-emerald-200">
+                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+                Released
+              </span>
+            </div>
+            <p class="text-sm text-slate-300">
+              Ravel tracks a bruise in the forest floor that hums in threes. Beneath it? A captive signal waiting to be translated, Stryker’s bond-line,
+              and a predator that does not want witnesses.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a data-link="stripeSignalsEp01" data-new-tab="true" class="cta-primary">
+                Buy now · $0.99
+              </a>
+              <a data-link="downloadSignalsEp01" data-new-tab="true" class="nav-link--ghost text-slate-200">
+                Download full episode ↗
+              </a>
+              <a data-link="amazonSignals01" data-new-tab="true" class="nav-link--ghost text-slate-200">
+                Amazon listing ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="episode-card space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-400">Episode 02</p>
+                <h3 class="text-xl font-semibold text-slate-50">Ash & Smoke</h3>
+              </div>
+              <span class="status-chip border border-amber-400/50 bg-amber-500/15 text-amber-200">
+                <span class="h-2 w-2 rounded-full bg-amber-300"></span>
+                Coming soon
+              </span>
+            </div>
+            <p class="text-sm text-slate-300">
+              Igz picks up a double heartbeat in the ashfall when Watcher stirs awake. The report is urgent—if he can get back to the City alive.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://dcbarletta.substack.com" data-link="substack" data-new-tab="true" class="nav-link--ghost text-slate-200" rel="noopener noreferrer">
+                Notify me
+              </a>
+              <p class="text-xs text-slate-500">ETA: Month 2</p>
+            </div>
+          </article>
+
+          <article class="episode-card space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-400">Episode 03</p>
+                <h3 class="text-xl font-semibold text-slate-50">The Weep’s Edge</h3>
+              </div>
+              <span class="status-chip border border-slate-500/60 bg-slate-800 text-slate-300">
+                <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                In production
+              </span>
+            </div>
+            <p class="text-sm text-slate-300">
+              A Thal fisherman records what happens when Sky City’s runoff meets the open sea—and why the Watch sends no scouts there anymore.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://dcbarletta.substack.com" data-link="substack" data-new-tab="true" class="nav-link--ghost text-slate-200" rel="noopener noreferrer">
+                Join the watchlist
+              </a>
+              <p class="text-xs text-slate-500">ETA: Month 3</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-950/70 p-6 shadow-soft-bronze md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center">
+        <div class="space-y-4">
+          <p class="section-label">Upsell</p>
+          <h2 class="font-display text-3xl font-semibold text-slate-50">Unlock the Vault. Go Behind the Mic.</h2>
+          <p class="text-sm text-slate-300">
+            Join the World Builder’s Vault on Patreon for annotated scripts, engineering breakdowns, and vault-only episodes.
+            Includes commentary tracks, creature dossiers, and blooper reels you can’t get anywhere else.
+          </p>
+          <a href="https://www.patreon.com/c/WorldofTethysDCBarletta" data-link="patreon" data-new-tab="true" class="cta-primary w-full sm:w-auto" rel="noopener noreferrer">
+            Explore exclusive tiers
+          </a>
+        </div>
+        <div class="rounded-3xl border border-slate-800/70 bg-slate-950/60 p-5 text-sm text-slate-300">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Included in vault tiers</p>
+          <ul class="mt-3 space-y-2">
+            <li>• Creator commentary + engineering walkthroughs.</li>
+            <li>• Script PDFs with lore footnotes and sketches.</li>
+            <li>• Early access to merch and collector drops.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner">
+        <div class="space-y-2">
+          <h3 class="text-sm font-semibold text-slate-50">D.C. Barletta</h3>
+          <p class="text-xs text-slate-400">Author & producer of the World of Tethys series. Audio built to ACX professional standards.</p>
+        </div>
+        <div class="social-links">
+          <a data-link="youtube" data-new-tab="true" class="social-link">YT</a>
+          <a data-link="instagram" data-new-tab="true" class="social-link">IG</a>
+          <a data-link="tiktok" data-new-tab="true" class="social-link">TT</a>
+        </div>
+        <p class="text-xs leading-relaxed text-slate-400 text-center lg:ml-auto lg:text-right">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="./public/tethys-links.js" defer></script>
+  <script src="./public/tethys-effects.js" defer></script>
+</body>
+</html>

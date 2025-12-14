@@ -1,0 +1,29 @@
+{% macro render(activeId='home', itemsList=None, classes='flex flex-wrap gap-3', showWatchlist=true) %}
+  {% set defaultNavItems = [
+    { id: 'home', label: 'Home', href: 'index.html' },
+    { id: 'world', label: 'World', href: 'world-of-tethys.html' },
+    { id: 'books', label: 'Books', href: '/books-2' },
+    { id: 'shop', label: 'Shop', href: 'shop.html' },
+    { id: 'characters', label: 'Characters', href: '/characters' },
+    { id: 'real-science', label: 'Real Science', href: '/real-science' },
+    { id: 'comments', label: 'Comments', href: '/comments' },
+    { id: 'signals', label: 'Signals', href: '/signals-from-thethys' },
+    { id: 'reading-room', label: 'Reading Room', href: 'reading-room.html' },
+    { id: 'support', label: 'Support', href: 'support.html' },
+    { id: 'about', label: 'About', href: 'about.html' }
+  ] %}
+  {% if itemsList is not none %}
+    {% set navItems = itemsList %}
+  {% else %}
+    {% set navItems = defaultNavItems %}
+  {% endif %}
+  <nav class="{{ classes }}">
+    {% for item in navItems %}
+      {% set isActive = activeId == item.id %}
+      <a href="{{ item.href }}" class="nav-pill{% if isActive %} nav-pill--active{% endif %}"{% if isActive %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    {% endfor %}
+    {% if showWatchlist %}
+      <a href="https://dcbarletta.substack.com" class="nav-pill" target="_blank" rel="noopener noreferrer">Join the Watchlist</a>
+    {% endif %}
+  </nav>
+{% endmacro %}

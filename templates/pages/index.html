@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World of Tethys · Home</title>
+  <meta name="description" content="Enter the World of Tethys—Sky City exiles, Mystic Woods signals, and science-fantasy lore blending real estuary research with creature-driven storytelling.">
+  <link rel="stylesheet" href="./public/tethys.css">
+  <link rel="stylesheet" href="./public/tethys-effects.css">
+  <style>
+    .intro-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      backdrop-filter: blur(14px);
+      background:
+        radial-gradient(circle at 25% 25%, rgba(248, 113, 113, 0.25), transparent 60%),
+        radial-gradient(circle at 75% 15%, rgba(59, 130, 246, 0.2), transparent 65%),
+        rgba(2, 6, 23, 0.92);
+      color: #f8fafc;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 600ms ease;
+      z-index: 999;
+    }
+
+    .intro-overlay__logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+
+    .intro-overlay__letters {
+      font-family: 'Cinzel', 'Space Grotesk', serif;
+      font-size: clamp(2.25rem, 4vw, 4rem);
+      font-weight: 600;
+      display: inline-flex;
+      gap: 0.4em;
+      animation: introPulse 2.8s ease-in-out infinite;
+    }
+
+    .intro-overlay__tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.4em;
+      color: rgba(226, 232, 240, 0.85);
+    }
+
+    .intro-overlay__skip {
+      border: 1px solid rgba(248, 113, 113, 0.4);
+      background: transparent;
+      color: #f8fafc;
+      border-radius: 999px;
+      padding: 0.5rem 1.75rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 200ms ease, color 200ms ease;
+    }
+
+    .intro-overlay__skip:hover,
+    .intro-overlay__skip:focus-visible {
+      border-color: rgba(248, 113, 113, 0.75);
+      color: #fcd34d;
+      outline: none;
+    }
+
+    .intro-overlay__glow {
+      width: clamp(160px, 28vw, 320px);
+      height: clamp(160px, 28vw, 320px);
+      border-radius: 9999px;
+      border: 1px solid rgba(248, 113, 113, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle, rgba(248, 113, 113, 0.22), transparent 65%),
+        radial-gradient(circle at 30% 20%, rgba(251, 191, 36, 0.35), transparent 70%);
+      box-shadow:
+        0 0 65px rgba(248, 113, 113, 0.35),
+        inset 0 0 35px rgba(248, 113, 113, 0.25);
+      animation: introHalo 5s ease-in-out infinite;
+    }
+
+    .intro-overlay--active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .intro-overlay--done {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes introPulse {
+      0% {
+        letter-spacing: 0.3em;
+        text-shadow: 0 0 12px rgba(248, 113, 113, 0.6);
+      }
+      50% {
+        letter-spacing: 0.4em;
+        text-shadow: 0 0 32px rgba(252, 211, 77, 0.8);
+      }
+      100% {
+        letter-spacing: 0.3em;
+        text-shadow: 0 0 12px rgba(248, 113, 113, 0.6);
+      }
+    }
+
+    @keyframes introHalo {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .intro-overlay {
+        animation: none;
+      }
+
+      .intro-overlay__letters,
+      .intro-overlay__glow {
+        animation: none;
+      }
+    }
+
+    .hero-video-wrapper {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-video-wrapper > *:not(.hero-video) {
+      position: relative;
+      multiply: fit;
+      z-index: 1;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-video__media {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.85) brightness(0.8);
+    }
+
+    .hero-video__scrim {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(2, 6, 23, 0.75), rgba(15, 23, 42, 0.65)),
+        radial-gradient(circle at 20% 20%, rgba(248, 113, 113, 0.2), transparent 60%);
+      mix-blend-mode: multiply;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-video {
+        display: none;
+      }
+    }
+  </style>
+{% import "partials/nav.njk" as nav %}
+</head>
+<body>
+  {% set currentNav = 'home' %}
+  <div id="wot-intro" class="intro-overlay" aria-hidden="true">
+    <div class="intro-overlay__glow">
+      <div class="intro-overlay__logo">
+        <span class="intro-overlay__letters">W · O · T</span>
+        <p class="intro-overlay__tagline">Audio Signal Linking</p>
+      </div>
+    </div>
+    <button type="button" class="intro-overlay__skip" data-skip-intro>Skip</button>
+    <audio id="wot-intro-audio" src="./public/audio/wot-logo.mp3" preload="auto"></audio>
+  </div>
+  {% set navActive = currentNav %}
+  {% include "partials/site-nav.njk" %}
+  <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
+    <div class="bg-volcano hero-video-wrapper">
+      <div class="hero-video" aria-hidden="true">
+        <video class="hero-video__media" autoplay muted loop playsinline poster="./public/images/volcano-bg.png">
+          <source src="./public/video/tethys-trailer.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video__scrim"></div>
+      </div>
+      
+                <div class="flex justify-between gap-3 text-slate-400">
+                  <dt>Focus</dt>
+                  <dd class="text-slate-100">Science-fantasy epics</dd>
+                </div>
+                <div class="flex justify-between gap-3 text-slate-400">
+                  <dt>Current build</dt>
+                  <dd class="text-slate-100">Sky City edits · Audio short drops</dd>
+                </div>
+              </dl>
+            </aside>
+
+            <div class="space-y-5">
+              <div class="flex flex-wrap gap-3 text-[11px] uppercase tracking-[0.24em] text-slate-400">
+                <span class="stat-chip">Signals active</span>
+                <span class="stat-chip stat-chip--emerald">Loyalty sync live</span>
+              </div>
+              <div class="space-y-3">
+                <p class="eyebrow text-lava-200">World of Tethys</p>
+                <h1 class="font-display text-4xl font-semibold text-slate-50 sm:text-5xl">
+                  Science fantasy where ecosystems fight back.
+                </h1>
+                <p class="max-w-2xl text-sm text-slate-300">
+                  Sky cities, prehistoric seas, and dangerous bonds between humans and their beasts—told in novels, Signals dispatches,
+                  and narrated shorts engineered for ACX. Every episode mixes field science, ecology, and character-first stakes.
+                </p>
+              </div>
+              <ul class="grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
+                <li>• Signals shorts average 18–22 minutes with atmosphere-rich mastering.</li>
+                <li>• Book One (Sky City) is in polish; Kindle singles ship meanwhile.</li>
+                <li>• Patreon unlocks vault lore, engineering notes, and dispatch polls.</li>
+                <li>• Substack drops experimental imagery + flight plans between launches.</li>
+              </ul>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a href="/signals-from-thethys" class="cta-primary w-full sm:w-auto">
+                  Start with Signals Dispatches
+                </a>
+                <a href="https://www.patreon.com/c/WorldofTethysDCBarletta" data-link="patreon" data-new-tab="true" class="nav-link--ghost inline-flex w-full items-center justify-center gap-2 text-slate-200 sm:w-auto" rel="noopener noreferrer">
+                  Join the Patreon
+                </a>
+              </div>
+            </div>
+
+            {% set heroNavItems = [
+              { id: 'world', label: 'World', href: 'world-of-tethys.html' },
+              { id: 'books', label: 'Books', href: '/books-2' },
+              { id: 'signals', label: 'Signals', href: '/signals-from-thethys' },
+              { id: 'real-science', label: 'Real Science', href: '/real-science' },
+              { id: 'comments', label: 'Comments', href: '/comments' }
+            ] %}
+            {{ nav.render('home', heroNavItems, 'col-span-full flex flex-wrap gap-3 border-t border-slate-800/50 pt-4', false) }}
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <section class="space-y-4">
+        <p class="section-label">Start here</p>
+        <h2 class="font-display text-3xl font-semibold text-slate-50">Choose your way into Tethys</h2>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card-shell flex h-full flex-col gap-3 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Read</p>
+            <h3 class="text-lg font-semibold text-slate-50">Read the stories</h3>
+            <p class="text-sm text-slate-300">
+              Start with the Signals short fiction line while Book One finishes edits.
+            </p>
+            <a href="world-of-tethys.html#shorts" class="nav-link--ghost mt-auto inline-flex items-center gap-2 text-lava-200">
+              Explore Kindle releases ↗
+            </a>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-3 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Listen</p>
+            <h3 class="text-lg font-semibold text-slate-50">Listen to the audio</h3>
+            <p class="text-sm text-slate-300">
+              Dive into premium 20-minute Signals from Tethys dispatches and narrated shorts.
+            </p>
+            <a href="/signals-from-thethys" class="nav-link--ghost mt-auto inline-flex items-center gap-2 text-lava-200">
+              Hear the Signals ↗
+            </a>
+          </article>
+
+          <article class="card-shell flex h-full flex-col gap-3 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Support</p>
+            <h3 class="text-lg font-semibold text-slate-50">Support the world</h3>
+            <p class="text-sm text-slate-300">
+              Join the Circle on Patreon, share clips, or grab shorts on Kindle and Audible.
+            </p>
+            <a href="support.html" class="nav-link--ghost mt-auto inline-flex items-center gap-2 text-lava-200">
+              See how to help ↗
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="mt-12 card-shell p-6 space-y-4">
+        <div class="space-y-2">
+          <p class="section-label">Support CTA</p>
+          <h2 class="font-display text-3xl font-semibold text-slate-50">Fuel the Signals via Stripe</h2>
+          <p class="text-sm text-slate-300">Tap the hosted Stripe button to join Watcher’s Crescent ($2/mo) and keep dispatches flowing.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4 text-center">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1Sci9DLW0kz6xhQECEesQvSM"
+            publishable-key="pk_live_51SbaZgLW0kz6xhQECz0AypYFbiL8voH7zKuKfOnOmHtfEqVKNUsSeDC6gcjdIj5fC8Zh3VfyU2jzEVUriEDdfsCG00sLw8aqaU"
+          >
+          </stripe-buy-button>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="card-shell p-6">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div class="space-y-3">
+              <p class="section-label">Free newsletter</p>
+              <h2 class="font-display text-3xl font-semibold text-slate-50">Pteroswifts from Tethys</h2>
+              <p class="text-sm text-slate-300">
+                Flying dispatches from the World of Tethys—story updates, experimental imagery, and lore that doesn’t fit anywhere else.
+                Expect early peeks at shorts and audiobooks, weird field cards, studio notes, and the occasional science-nerd dive.
+                No spam, just pteroswifts dropping in when there’s something worth sharing.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3 md:min-w-[240px]">
+              <a href="https://dcbarletta.substack.com" data-link="substack" data-new-tab="true" class="cta-primary justify-center" rel="noopener noreferrer">
+                Join the newsletter
+              </a>
+              <p class="text-center text-xs uppercase tracking-[0.2em] text-slate-500">Hosted on Substack</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tethys-footer">
+      <div class="tethys-footer__inner items-center justify-center text-center">
+        <p class="text-xs leading-relaxed text-slate-400">
+          <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+          <br class="hidden sm:block" />
+          <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="./public/tethys-links.js" defer></script>
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <script src="./public/tethys-effects.js" defer></script>
+  <script>
+  (function initWotIntro() {
+    const overlay = document.getElementById('wot-intro');
+    if (!overlay) return;
+    const skipButton = overlay.querySelector('[data-skip-intro]');
+    const audio = document.getElementById('wot-intro-audio');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const alreadyPlayed = sessionStorage.getItem('wotIntroPlayed');
+
+    if (prefersReducedMotion || alreadyPlayed) {
+      overlay.remove();
+      return;
+    }
+
+    function finishIntro() {
+      overlay.classList.add('intro-overlay--done');
+      sessionStorage.setItem('wotIntroPlayed', '1');
+      window.setTimeout(() => overlay.remove(), 600);
+    }
+
+    function playIntro() {
+      overlay.classList.add('intro-overlay--active');
+      if (audio) {
+        audio.currentTime = 0;
+        const playPromise = audio.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {});
+        }
+      }
+      window.setTimeout(finishIntro, 3600);
+    }
+
+    window.addEventListener('load', playIntro, { once: true });
+    skipButton?.addEventListener('click', finishIntro);
+  })();
+  </script>
+</body>
+</html>
