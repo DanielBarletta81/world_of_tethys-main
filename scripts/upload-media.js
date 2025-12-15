@@ -36,19 +36,47 @@ async function main() {
   const contentType = mime.getType(filePath) || 'application/octet-stream';
 
   const client = new S3Client({ region: REGION });
-  const putCommand = new PutObjectCommand({
-    Bucket: BUCKET,
-    Key: objectKey,
-    Body: fileBuffer,
-    ContentType: contentType,
-    ACL: makePublic ? 'public-read' : undefined
-  });
 
-  await client.send(putCommand);
+  async function uploadObject() {
+    const baseParams = {
+      Bucket: BUCKET,
+      Key: objectKey,
+      Body: fileBuffer,
+      ContentType: contentType
+    };
+
+    if (!makePublic) {
+      await client.send(new PutObjectCommand(baseParams));
+      return { aclApplied: false };
+    }
+
+    const paramsWithAcl = { ...baseParams, ACL: 'public-read' };
+    try {
+      await client.send(new PutObjectCommand(paramsWithAcl));
+      return { aclApplied: true };
+    } catch (err) {
+      const aclUnsupported =
+        err?.name === 'AccessControlListNotSupported' ||
+        err?.Code === 'AccessControlListNotSupported' ||
+        /does not allow ACLs/i.test(err?.message || '');
+      if (!aclUnsupported) {
+        throw err;
+      }
+
+      console.warn('Bucket rejects ACLs; retrying upload without ACL (Object Ownership enforced).');
+      await client.send(new PutObjectCommand(baseParams));
+      return { aclApplied: false };
+    }
+  }
+
+  const { aclApplied } = await uploadObject();
   console.log(`Uploaded ${filePath} -> s3://${BUCKET}/${objectKey}`);
 
   if (makePublic) {
     const base = CDN_DOMAIN ? `https://${CDN_DOMAIN}` : `https://${BUCKET}.s3.${REGION}.amazonaws.com`;
+    if (!aclApplied) {
+      console.warn('Object ACL not set. Ensure bucket policy/CDN grants public read access for the URL below.');
+    }
     console.log('Public URL:', `${base}/${objectKey}`);
     return;
   }
