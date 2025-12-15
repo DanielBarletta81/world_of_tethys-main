@@ -9,7 +9,7 @@ const TETHYS_LINKS = {
   tethysianGodsStripe: 'https://buy.stripe.com/00wcN69dEcz4aGBgxYgMw03',
   // Replace with your live SureCart storefront URL when ready.
   surecartSignals: 'https://your-surecart-store.example/signals-dispatch',
-  previewSignalsEp01: 'https://world-of-tethys-media-bucket.s3.us-east-1.amazonaws.com/signals/ep01/preview.mp3',
+  previewSignalsEp01: 'https://cdn.dcbarletta.com/signals/ep01/preview.mp3',
   downloadSignalsEp01: 'https://cdn.example.com/signals/downloads/episode-01.zip',
   amazonAuthor: 'https://www.amazon.com/author/dcbarletta',
   amazonSignals01: 'https://www.amazon.com/dp/B0G5TWV2GH',

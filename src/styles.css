@@ -90,8 +90,66 @@
     @apply nav-link border-slate-800/70 bg-slate-900/50;
   }
 
+  .watchlist-button {
+    @apply nav-link--ghost relative overflow-hidden text-lava-100;
+    transform: scale(1);
+    z-index: 0;
+    transition: transform 0.25s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  }
+
+  .watchlist-button::after {
+    content: '';
+    @apply absolute inset-0 rounded-full;
+    background: radial-gradient(circle at 50% 50%, rgba(255,118,73,0.35), rgba(251,92,44,0));
+    opacity: 0.15;
+    animation: watchlist-pulse 2.8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .watchlist-button:hover,
+  .watchlist-button:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px rgba(255,113,70,0.4);
+  }
+
+  .watchlist-button.is-rumbling {
+    animation: watchlist-rumble 0.55s ease;
+  }
+
   .nav-cta {
     @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-lava-400 via-lava-500 to-aurora-300 px-4 py-2 text-[11px] font-semibold text-slate-950 shadow-lava-ring transition hover:brightness-110;
+  }
+
+  @keyframes watchlist-rumble {
+    0% {
+      transform: scale(1.08) translate(0, 0) rotate(0deg);
+      box-shadow: 0 0 12px rgba(255,113,70,0.35);
+    }
+    30% {
+      transform: scale(1.08) translate(-1px, 1px) rotate(-0.6deg);
+    }
+    60% {
+      transform: scale(1.08) translate(1px, -1px) rotate(0.6deg);
+    }
+    100% {
+      transform: scale(1.08) translate(0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes watchlist-pulse {
+    0% {
+      opacity: 0.15;
+      filter: blur(0);
+    }
+    50% {
+      opacity: 0.4;
+      filter: blur(4px);
+    }
+    100% {
+      opacity: 0.15;
+      filter: blur(0);
+    }
   }
 
   .backlit-panel {

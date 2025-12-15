@@ -13,10 +13,6 @@ const stripe = new Stripe(STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16'
 });
 
-const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY || '';
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || '';
-const AIRTABLE_SUPPORTERS_TABLE = process.env.AIRTABLE_SUPPORTERS_TABLE || 'Supporters';
-
 const PRODUCTS = {
   signals_ep01: {
     amount: parseInt(process.env.SIGNALS_EP01_AMOUNT || '99', 10),
@@ -90,78 +86,6 @@ function ensureAuthenticated(req, res, next) {
     return res.status(401).json({ error: 'Login required' });
   }
   return next();
-}
-
-async function airtableRequest(path, options = {}) {
-  if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
-    throw new Error('Airtable credentials missing');
-  }
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${path}`;
-  const response = await fetch(url, {
-    ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${AIRTABLE_API_KEY}`,
-      ...(options.headers || {})
-    }
-  });
-  if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`Airtable error: ${response.status} ${text}`);
-  }
-  return response.json();
-}
-
-async function findSupporterByEmail(email) {
-  if (!email) return null;
-  const formula = encodeURIComponent(`LOWER({Email}) = LOWER("${email}")`);
-  const data = await airtableRequest(`${AIRTABLE_SUPPORTERS_TABLE}?filterByFormula=${formula}&maxRecords=1`);
-  return data.records?.[0] || null;
-}
-
-async function upsertSupporterRecord({ email, platform, tier, joined }) {
-  if (!email) return;
-  const existing = await findSupporterByEmail(email);
-  const fields = {
-    Email: email,
-    Platform: platform,
-    Tier: tier,
-    Joined: joined ? new Date(joined).toISOString() : undefined
-  };
-
-  const sanitizedFields = Object.fromEntries(
-    Object.entries(fields).filter(([_, value]) => Boolean(value))
-  );
-
-  if (existing) {
-    await airtableRequest(`${AIRTABLE_SUPPORTERS_TABLE}/${existing.id}`, {
-      method: 'PATCH',
-      body: JSON.stringify({ fields: sanitizedFields })
-    });
-  } else {
-    await airtableRequest(AIRTABLE_SUPPORTERS_TABLE, {
-      method: 'POST',
-      body: JSON.stringify({ fields: sanitizedFields })
-    });
-  }
-}
-
-async function getCustomerEmail(subscription) {
-  if (subscription.customer_email) return subscription.customer_email;
-  if (subscription.customer && typeof subscription.customer === 'string') {
-    const customer = await stripe.customers.retrieve(subscription.customer);
-    return customer.email;
-  }
-  return null;
-}
-
-function deriveTierFromSubscription(subscription) {
-  return (
-    subscription.metadata?.tier ||
-    subscription.items?.data?.[0]?.price?.metadata?.tier ||
-    subscription.items?.data?.[0]?.price?.nickname ||
-    'ember'
-  );
 }
 
 app.post('/create-payment-intent', jsonParser, async (req, res) => {
@@ -248,22 +172,6 @@ app.post('/api/reading-room/messages', jsonParser, ensureAuthenticated, async (r
   }
 });
 
-app.post('/supporter-sync', jsonParser, async (req, res) => {
-  const { email, platform = 'manual', tier = 'ember', joined = Date.now() } = req.body || {};
-
-  if (!email) {
-    return res.status(400).json({ error: 'Email required' });
-  }
-
-  try {
-    await upsertSupporterRecord({ email, platform, tier, joined });
-    return res.json({ success: true });
-  } catch (error) {
-    console.error('Error syncing supporter:', error.message);
-    return res.status(500).json({ error: 'Unable to sync supporter' });
-  }
-});
-
 app.post(
   '/stripe-webhook',
   express.raw({ type: 'application/json' }),
@@ -276,27 +184,8 @@ app.post(
       return res.sendStatus(400);
     }
 
-    try {
-      switch (event.type) {
-        case 'customer.subscription.created':
-        case 'customer.subscription.updated': {
-          const subscription = event.data.object;
-          const tier = deriveTierFromSubscription(subscription);
-          const email = await getCustomerEmail(subscription);
-          await upsertSupporterRecord({
-            email,
-            platform: 'stripe',
-            tier,
-            joined: subscription.start_date * 1000
-          });
-          break;
-        }
-        default:
-          break;
-      }
-    } catch (error) {
-      console.error('Error handling webhook:', error.message);
-      return res.sendStatus(500);
+    if (event.type === 'customer.subscription.created' || event.type === 'customer.subscription.updated') {
+      console.log('Stripe subscription event received:', event.type);
     }
 
     return res.sendStatus(200);

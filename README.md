@@ -73,14 +73,20 @@ Whenever you change tokens or the CSS, re-run `npm run build` before deploying t
 
 ### Local Express server
 
-- `server.js` is a minimal Express API that exposes `/create-payment-intent`, `/supporter-sync`, and a `/stripe-webhook`.
+- `server.js` is a minimal Express API that exposes `/create-payment-intent` and `/stripe-webhook`.
 - Env vars:
   - `STRIPE_SECRET_KEY` – your secret key.
   - `STRIPE_WEBHOOK_SECRET` – signing secret for the webhook endpoint.
   - `SIGNALS_EP01_AMOUNT` / `SIGNALS_BUNDLE_AMOUNT` – optional overrides (cents, defaults 99 and 249).
-  - `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID`, `AIRTABLE_SUPPORTERS_TABLE` – used to upsert subscribers into your “Council Ledger”.
 - Run `npm install` (to pull `express` + `stripe`) and start it via `npm start`.
 - Deploy the same handler to your host of choice (Render, Railway, Netlify functions) and update `CREATE_INTENT_ENDPOINT` in `signals-checkout.html` if you move it off the root domain.
+
+### Getting your Stripe credentials
+
+1. Log into the [Stripe Dashboard](https://dashboard.stripe.com) → Developers → API keys. Copy the **Secret key** (starts with `sk_test_...` in test mode) and drop it into `STRIPE_SECRET_KEY`.
+2. For local webhooks, install the Stripe CLI and run `stripe listen --forward-to localhost:3000/stripe-webhook`. The CLI prints a `whsec_...` token—set that as `STRIPE_WEBHOOK_SECRET`.
+3. If you also render the front-end checkout, grab the **Publishable key** (`pk_test_...`) for client-side scripts.
+4. When you’re ready for production, switch to the live mode dashboard and rotate both keys plus the webhook secret.
 
 ### Membership tiers (consistent naming)
 
@@ -89,12 +95,6 @@ Whenever you change tokens or the CSS, re-run `npm run build` before deploying t
 - **Watcher Council ($20+/mo)** – elite/supporter tier with limited seats, quarterly briefings, and lore votes.
 
 Use these names when creating Stripe Products, Substack tiers, and Patreon memberships so your perks stay synchronized no matter where supporters subscribe.
-
-### Loyalty automation wiring
-
-- Stripe sends subscription events to `/stripe-webhook`, which validates the signature (`STRIPE_WEBHOOK_SECRET`), derives the tier from metadata/price nickname, fetches the customer email, and upserts into Airtable.
-- `/supporter-sync` lets Patreon/Substack automations hit the same endpoint with `{ email, platform, tier, joined }` so everyone lands in one ledger.
-- Once records live in Airtable, you can build cron jobs/Zapier flows that watch for “Next Reward” milestones, pull discount codes, and fire Tethys-themed emails automatically.
 
 ## Media delivery + streaming previews (AWS S3)
 
@@ -131,6 +131,12 @@ Use these names when creating Stripe Products, Substack tiers, and Patreon membe
 2. Run Whisper captions (`scripts/generate_captions.py`) to get `.srt` inside `captions/`.
 3. Encode a short preview MP3, then push preview + full ZIP to S3 via `npm run media:upload path/to/file -- --key=signals/ep01/<preview-or-zip> --public`.
 4. Paste the new URLs into `public/tethys-links.js`. The `signals-from-tethys.html` preview player (`data-audio-link="previewSignalsEp01"`) and download CTAs update immediately.
+
+## Mini games playground
+
+- Lightweight lore-friendly games now live in `games/`. Start with `signal_ping.py`, a CLI guessing game you can run via `python games/signal_ping.py`.
+- Add new prototypes as single-file scripts and document them in `games/README.md`. Keep dependencies minimal so writers can test ideas without setup overhead.
+- When you eventually publish them on the site, wire the download/link cards to these scripts or to web-based ports (Pygame, Pyodide, etc.).
 
 ### Restoring heavy media locally
 
