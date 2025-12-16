@@ -5,222 +5,151 @@ Template Name: Tethys Characters
 get_header();
 ?>
 <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
-    <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <header class="mb-8 flex flex-col gap-4 rounded-3xl border border-lava-400/30 bg-slate-950/70 p-6 shadow-ember-line md:flex-row md:items-center md:justify-between">
-            <div>
-                <p class="eyebrow text-lava-300 drop-shadow-ember">World of Tethys · Cast</p>
-                <h1 class="font-display text-3xl font-semibold text-slate-50 drop-shadow-ember">
-                    Characters of <span class="italic">Sky City</span>
-                </h1>
-                <p class="max-w-2xl text-sm text-slate-300">
-                    The experiment in the clouds, the river clans below, the forests in between,
-                    and the creatures that stop obeying. Start with the core cast of
-                    <span class="font-semibold text-slate-100">World of Tethys: Sky City</span>.
-                </p>
-            </div>
-            <nav class="flex gap-3 text-[11px]">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-link nav-link--ghost">Igzier file</a>
-                <a href="<?php echo esc_url( tethys_page_link( 'books-2' ) ); ?>" class="nav-link">Books</a>
-            </nav>
-        </header>
-
-        <div class="mb-6 flex flex-wrap items-center gap-3 rounded-full border border-slate-800/80 bg-slate-950/70 px-4 py-3 text-[11px] text-slate-400 shadow-soft-bronze">
-            <span class="uppercase tracking-[0.18em] text-slate-500">Legend</span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-slate-900/70 px-2.5 py-1">
-                <span class="h-1.5 w-1.5 rounded-full bg-lava-500"></span>
-                Sky City
-            </span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-slate-900/70 px-2.5 py-1">
-                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                Mystic Woods
-            </span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-slate-900/70 px-2.5 py-1">
-                <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
-                Tethys Sea &  Danian River
-            </span>
+    <div class="bg-characters">
+        <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+            <header class="hero-shell">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                    <div class="space-y-3">
+                        <p class="eyebrow">World of Tethys · Cast</p>
+                        <h1 class="font-display text-4xl font-semibold text-slate-50">The bonds holding Sky City together</h1>
+                        <p class="max-w-3xl text-sm text-slate-300">
+                            The experiment in the clouds, the river clans below, the forests in between, and the creatures that stop obeying.
+                            Start with the four bonds at the heart of Season One, then meet the wider circle.
+                        </p>
+                    </div>
+                </div>
+            </header>
         </div>
-
-        <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-lava-500 to-slate-500 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-lava-500"></span>
-                        Sky City · Exile
-                    </span>
-                    <span>POV · Book 1</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Igzier</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    Mixed-lineage engineer who values honesty, and lives in a dishonest Sky City.
-                    Thrown from the Weep for telling the truth about his mentor’s death, and rabidly in love with Karys
-                </p><br>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Exiled by choice, instead of painless "The Quick"<br>
-                    • Bonded with Stryker<br>
-                    • Still deciding if the City deserves saving, or burning
-                </p><br>
-                <div class="mt-auto pt-4">
-                    
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-400 to-lava-500 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-sky-400"></span>
-                        Ptero-raptor “sky-hound”
-                    </span>
-                    <span>Creature · Bonded</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Stryker</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    Ptero–raptor “sky-hound” who chooses exile with Igzier, then loses him
-                    in ashfall when the Watcher wakes. Moose-sized, scarred, still thinks he’s a lap pet.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Built for gliding, diving, and bad decisions<br>
-                    • Tracks Igzier through caves, shelves, and ash<br>
-                    • Center of the Ashwing sigil
-                </p>
-                <div class="mt-auto pt-4">
-                    <a href="#" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-300">
-                        View Stryker’s file
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 to-lava-400 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-lava-500"></span>
-                        Sky City · Greenhouse
-                    </span>
-                    <span>Key POV</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Karys</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    Greenhouse heir who maps roots and water flow while the Triumvirate edits reality.
-                    Tied to comfort by family, tied to change by conscience.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Daughter of Lady Eldora<br>
-                    • Sees where pipes – and policies – crack<br>
-                    • One of the hands on the City’s scale
-                </p>
-                <div class="mt-auto pt-4">
-                    <a href="#" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-300">
-                        View Karys’s file
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 to-sky-400 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                        Mystic Woods
-                    </span>
-                    <span>POV · Healer</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Ravel</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    Mushroom tea-drunk forest healer who hears colors, tones, and “bruises in the air”
-                    instead of warnings. The man following Igzier by sound alone.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Calls the Weep “screaming in cracked teal”<br>
-                    • Talks to roots and a secretive archaeopteryx<br>
-                    • Quietly decides Igzier is worth keeping alive
-                </p>
-                <div class="mt-auto pt-4">
-                    <a href="#" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-300">
-                        View Ravel’s file
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-lava-400 to-slate-500 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-lava-500"></span>
-                        Sky City · Infrastructure
-                    </span>
-                    <span>Supporting</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Jairo</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    Lower-tier lifer who keeps the water flowing and the records clean. Wants
-                    to believe the City is fixable… until the cracks stop being theoretical.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Grew up alongside Igzier<br>
-                    • Mixed-lineage, too sharp for his slot<br>
-                    • Torn between loyalty and data
-                </p>
-                <div class="mt-auto pt-4">
-                    <a href="#" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-300">
-                        View Jairo’s file
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-slate-400 to-lava-500 opacity-70"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-lava-500"></span>
-                        Sky City · Mentor
-                    </span>
-                    <span>Deceased · Echo</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Melden</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    The scientist who insisted Sky City was an experiment, not a miracle.
-                    His “natural” death and Igzier’s refusal to lie about it light the fuse.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Runs tests above the Weep<br>
-                    • Frames survival as chance colliding with rules<br>
-                    • Lives on in Igzier’s worst (best) decisions
-                </p>
-                <div class="mt-auto pt-4">
-                    <a href="#" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-300">
-                        View Melden’s file
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card-shell relative flex h-full flex-col overflow-hidden border-dashed border-slate-700/80 bg-slate-950/50 p-4 transition hover:-translate-y-1">
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 to-emerald-400 opacity-40"></div>
-                <div class="mb-3 flex items-center justify-between gap-2 text-[11px] text-slate-400">
-                    <span class="inline-flex items-center gap-1">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-sky-400"></span>
-                        Factions
-                    </span>
-                    <span>Coming soon</span>
-                </div>
-                <h2 class="text-sm font-semibold text-slate-50">Silurians & Others</h2>
-                <p class="mt-1 text-xs text-slate-300">
-                    River clans, shelf-dwellers, and other groups whose choices shape what happens
-                    when Sky City’s experiment cracks.
-                </p>
-                <p class="mt-3 text-[11px] text-slate-400">
-                    • Silurians – riverbone people<br>
-                    • Thals – bonded warfronts<br>
-                    • More to be unveiled as the series grows
-                </p>
-            </article>
-        </section>
     </div>
+
+    <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
+        <section class="space-y-4">
+            <p class="section-label">Featured bonds</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">Igzier, Stryker, Karys &amp; Ravel</h2>
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+                <article class="featured-card">
+                    <div class="character-badge">
+                        <span class="inline-block h-2 w-2 rounded-full bg-lava-500"></span>
+                        Sky City · Exile
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-50">Igzier</h3>
+                    <p class="text-sm text-slate-300">
+                        Mixed-lineage engineer who treats Sky City like a system on a slab. Thrown from the Weep for refusing
+                        to lie about his mentor’s “natural” death.
+                    </p>
+                    <ul class="mt-3 text-xs text-slate-400 space-y-1">
+                        <li>• Numbers-first, heart-late.</li>
+                        <li>• Bonded with a reckless sky-hound.</li>
+                        <li>• Still deciding if the City deserves saving.</li>
+                    </ul>
+                </article>
+
+                <article class="featured-card">
+                    <div class="character-badge">
+                        <span class="inline-block h-2 w-2 rounded-full bg-sky-400"></span>
+                        Ashwing · Bonded creature
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-50">Stryker</h3>
+                    <p class="text-sm text-slate-300">
+                        Ptero–raptor “sky-hound” who dives after Igzier during the exile drop, then loses him in ashfall when Watcher stirs.
+                        Moose-sized, scarred, still thinks he’s a lap pet.
+                    </p>
+                    <ul class="mt-3 text-xs text-slate-400 space-y-1">
+                        <li>• Built for gliding, diving, and bad decisions.</li>
+                        <li>• Tracks Igzier through caves, shelves, and ash.</li>
+                        <li>• Center of the Ashwing sigil.</li>
+                    </ul>
+                </article>
+
+                <article class="featured-card">
+                    <div class="character-badge">
+                        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+                        Greenhouse · POV
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-50">Karys</h3>
+                    <p class="text-sm text-slate-300">
+                        Greenhouse heir who maps roots and water flow while the Triumvirate edits reality. Tied to comfort by family,
+                        tied to change by conscience.
+                    </p>
+                    <ul class="mt-3 text-xs text-slate-400 space-y-1">
+                        <li>• Daughter of Lady Eldora.</li>
+                        <li>• Sees where pipes—and policies—crack.</li>
+                        <li>• One of the hands on the City’s scale.</li>
+                    </ul>
+                </article>
+
+                <article class="featured-card">
+                    <div class="character-badge">
+                        <span class="inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
+                        Younger Woods · Healer
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-50">Ravel</h3>
+                    <p class="text-sm text-slate-300">
+                        Tea-drunk forest healer who hears color, tone, and “bruises in the air” instead of warnings. Quietly decides
+                        Igzier is worth keeping alive.
+                    </p>
+                    <ul class="mt-3 text-xs text-slate-400 space-y-1">
+                        <li>• Calls the Weep “screaming in cracked teal.”</li>
+                        <li>• Talks to roots and a secretive archaeopteryx.</li>
+                        <li>• Follows trail hum more than orders.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <div class="flex items-center justify-between gap-4">
+                <div>
+                    <p class="section-label">Other threads</p>
+                    <h2 class="font-display text-3xl font-semibold text-slate-50">Scan the wider cast</h2>
+                </div>
+                <p class="carousel-hint">Swipe or scroll sideways</p>
+            </div>
+            <div class="character-carousel">
+                <div class="carousel-track">
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Jairo</h3>
+                        <p class="mt-2 text-xs text-slate-400">Infrastructure · Lower tiers</p>
+                        <p class="mt-2">Keeps the water records clean. Torn between loyalty to Igzier and the City that keeps shrinking his future.</p>
+                    </article>
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Melden</h3>
+                        <p class="mt-2 text-xs text-slate-400">Mentor · Echo</p>
+                        <p class="mt-2">Scientist who insisted Sky City was an experiment, not a miracle. His death lights the fuse.</p>
+                    </article>
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Lady Eldora</h3>
+                        <p class="mt-2 text-xs text-slate-400">Triumvirate · Sky City</p>
+                        <p class="mt-2">Karys’s mother. Keeps the greenhouses lush while rationing truth.</p>
+                    </article>
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Kel</h3>
+                        <p class="mt-2 text-xs text-slate-400">Blockade runner</p>
+                        <p class="mt-2">River-clan scout who ferries intel between tiers and knows how to bend the blockade rules.</p>
+                    </article>
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Herc</h3>
+                        <p class="mt-2 text-xs text-slate-400">Sea beast handler</p>
+                        <p class="mt-2">Keeps prehistoric mammoths docile and has opinions about humans who try to ride storms.</p>
+                    </article>
+                    <article class="carousel-card">
+                        <h3 class="text-base font-semibold text-slate-50">Ashwing rookery twins</h3>
+                        <p class="mt-2 text-xs text-slate-400">Support · Younger Woods</p>
+                        <p class="mt-2">Keep Stryker’s kin alive and whisper in whistles only bonded creatures understand.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tethys-footer">
+        <div class="tethys-footer__inner items-center justify-center text-center">
+            <p class="text-xs leading-relaxed text-slate-400">
+                <span class="font-semibold text-slate-100">© 2025 D. C. Barletta. All rights reserved.</span>
+                <br class="hidden sm:block" />
+                <span class="text-slate-500">World of Tethys and all related names, characters, places, and concepts are trademarks of D. C. Barletta.</span>
+            </p>
+        </div>
+    </footer>
 </div>
 <?php get_footer(); ?>

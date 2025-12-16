@@ -10,7 +10,7 @@ const TETHYS_LINKS = {
   // Replace with your live SureCart storefront URL when ready.
   surecartSignals: 'https://your-surecart-store.example/signals-dispatch',
   previewSignalsEp01: 'https://cdn.dcbarletta.com/signals/ep01/preview.mp3',
-  downloadSignalsEp01: 'https://cdn.example.com/signals/downloads/episode-01.zip',
+  downloadSignalsEp01: 'https://cdn.dcbarletta.com/signals/ep01/download.zip',
   amazonAuthor: 'https://www.amazon.com/author/dcbarletta',
   amazonSignals01: 'https://www.amazon.com/dp/B0G5TWV2GH',
   amazonSkyCity: 'https://www.amazon.com/dp/B0G572X42L',

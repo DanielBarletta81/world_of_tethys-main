@@ -1,0 +1,8 @@
+{
+  "signals": {
+    "ep01": {
+      "preview": "https://cdn.dcbarletta.com/signals/ep01/preview.mp3",
+      "download": "https://cdn.dcbarletta.com/signals/ep01/download.zip"
+    }
+  }
+}

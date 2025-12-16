@@ -104,6 +104,7 @@ Use these names when creating Stripe Products, Substack tiers, and Patreon membe
 - Upload previews or full downloads with `npm run media:upload ./audio/ep01-preview.mp3 -- --key=signals/ep01/preview.mp3 --public`. The helper prints the final URL (public or temporary signed URL).
 - Paste the returned URLs into `public/tethys-links.js` keys such as `previewSignalsEp01` or `downloadSignalsEp01`. The Signals page and CTA buttons automatically hydrate any `[data-link]` or `[data-audio-link]` elements with those endpoints.
 - Keep raw WAV/FLAC masters locally and only push ACX-ready MP3/Zip deliverables to S3. That keeps bandwidth costs down while still letting you stream a 60–90 second preview and host the paid download in the bucket.
+- Track canon URLs in `data/media-manifest.json` and regenerate the link maps by running `node scripts/sync-media-links.js`. This updates both the site (`public/tethys-links.js`) and the WordPress theme copy without manual edits.
 
 ## Reading Room authentication (Auth0 + MongoDB)
 

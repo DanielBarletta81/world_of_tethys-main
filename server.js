@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const Stripe = require('stripe');
-const { auth } = require('@auth0/express-openid-connect');
+const { auth } = require('express-openid-connect');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express();

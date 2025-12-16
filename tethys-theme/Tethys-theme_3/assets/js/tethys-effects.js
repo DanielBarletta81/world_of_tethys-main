@@ -84,4 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     });
   }
+
+  // Watchlist volcanic rumble
+  document.querySelectorAll('[data-watchlist-trigger]').forEach((button) => {
+    button.addEventListener('click', () => {
+      button.classList.remove('is-rumbling');
+      void button.offsetWidth; // force reflow so the animation can restart
+      button.classList.add('is-rumbling');
+      setTimeout(() => button.classList.remove('is-rumbling'), 600);
+    });
+  });
 });
