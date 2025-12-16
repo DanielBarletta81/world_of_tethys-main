@@ -59,8 +59,10 @@ if (!AUTH0_DOMAIN || !AUTH0_CLIENT_ID || !AUTH0_CLIENT_SECRET) {
 const mongoUri = process.env.MONGODB_URI;
 const mongoDbName = process.env.MONGODB_DB || 'tethys';
 const mongoCollectionName = process.env.READING_ROOM_COLLECTION || 'reading-room';
+const transactionsCollectionName = process.env.TRANSACTIONS_COLLECTION || 'transactions';
 let mongoClient;
 let readingRoomCollection;
+let transactionsCollection;
 
 async function getReadingRoomCollection() {
   if (!mongoUri) {
@@ -75,6 +77,30 @@ async function getReadingRoomCollection() {
     await readingRoomCollection.createIndex({ createdAt: -1 });
   }
   return readingRoomCollection;
+}
+
+async function getTransactionsCollection() {
+  if (!mongoUri) {
+    throw new Error('MONGODB_URI is not set. Transaction logging unavailable.');
+  }
+  if (!mongoClient) {
+    mongoClient = new MongoClient(mongoUri, { serverApi: ServerApiVersion.v1 });
+    await mongoClient.connect();
+  }
+  if (!transactionsCollection) {
+    transactionsCollection = mongoClient.db(mongoDbName).collection(transactionsCollectionName);
+    await transactionsCollection.createIndex({ occurredAt: -1 });
+  }
+  return transactionsCollection;
+}
+
+async function recordTransaction(doc) {
+  try {
+    const collection = await getTransactionsCollection();
+    await collection.insertOne(doc);
+  } catch (error) {
+    console.error('Transaction log failed:', error.message);
+  }
 }
 
 function sanitizeContent(content = '') {
@@ -184,8 +210,50 @@ app.post(
       return res.sendStatus(400);
     }
 
-    if (event.type === 'customer.subscription.created' || event.type === 'customer.subscription.updated') {
-      console.log('Stripe subscription event received:', event.type);
+    const eventObject = event.data?.object || {};
+    const occurredAt = eventObject.created ? new Date(eventObject.created * 1000) : new Date(event.created * 1000);
+    const baseTransaction = {
+      eventId: event.id,
+      eventType: event.type,
+      occurredAt
+    };
+
+    switch (event.type) {
+      case 'payment_intent.succeeded': {
+        const paymentIntent = eventObject;
+        await recordTransaction({
+          ...baseTransaction,
+          transactionId: paymentIntent.id,
+          amount: paymentIntent.amount_received ?? paymentIntent.amount ?? null,
+          currency: paymentIntent.currency,
+          category: paymentIntent.metadata?.category || paymentIntent.metadata?.productId || null
+        });
+        break;
+      }
+      case 'checkout.session.completed': {
+        const session = eventObject;
+        await recordTransaction({
+          ...baseTransaction,
+          transactionId: session.payment_intent || session.id,
+          amount: session.amount_total ?? session.amount_subtotal ?? null,
+          currency: session.currency,
+          category: session.metadata?.category || session.metadata?.productId || null
+        });
+        break;
+      }
+      case 'charge.succeeded': {
+        const charge = eventObject;
+        await recordTransaction({
+          ...baseTransaction,
+          transactionId: charge.id,
+          amount: charge.amount_captured ?? charge.amount ?? null,
+          currency: charge.currency,
+          category: charge.metadata?.category || charge.metadata?.productId || null
+        });
+        break;
+      }
+      default:
+        break;
     }
 
     return res.sendStatus(200);

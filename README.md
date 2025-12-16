@@ -78,8 +78,10 @@ Whenever you change tokens or the CSS, re-run `npm run build` before deploying t
   - `STRIPE_SECRET_KEY` – your secret key.
   - `STRIPE_WEBHOOK_SECRET` – signing secret for the webhook endpoint.
   - `SIGNALS_EP01_AMOUNT` / `SIGNALS_BUNDLE_AMOUNT` – optional overrides (cents, defaults 99 and 249).
+  - `TRANSACTIONS_COLLECTION` – Mongo collection used to log payment events (defaults to `transactions`).
 - Run `npm install` (to pull `express` + `stripe`) and start it via `npm start`.
 - Deploy the same handler to your host of choice (Render, Railway, Netlify functions) and update `CREATE_INTENT_ENDPOINT` in `signals-checkout.html` if you move it off the root domain.
+- Successful Stripe webhooks (`payment_intent.succeeded`, `checkout.session.completed`, `charge.succeeded`) are automatically recorded in MongoDB (`TRANSACTIONS_COLLECTION`) with the event date, amount, currency, category (from metadata), and transaction ID so you have a clean ledger.
 
 ### Getting your Stripe credentials
 
