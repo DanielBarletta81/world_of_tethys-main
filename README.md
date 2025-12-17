@@ -82,6 +82,7 @@ Whenever you change tokens or the CSS, re-run `npm run build` before deploying t
 - Run `npm install` (to pull `express` + `stripe`) and start it via `npm start`.
 - Deploy the same handler to your host of choice (Render, Railway, Netlify functions) and update `CREATE_INTENT_ENDPOINT` in `signals-checkout.html` if you move it off the root domain.
 - Successful Stripe webhooks (`payment_intent.succeeded`, `checkout.session.completed`, `charge.succeeded`) are automatically recorded in MongoDB (`TRANSACTIONS_COLLECTION`) with the event date, amount, currency, category (from metadata), and transaction ID so you have a clean ledger.
+- To backfill historic sales, run `node scripts/backfill-transactions.js --limit=100` after setting `STRIPE_SECRET_KEY` and Mongo env vars. The script pulls past payment intents and upserts them into the same collection.
 
 ### Getting your Stripe credentials
 

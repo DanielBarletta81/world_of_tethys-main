@@ -2755,6 +2755,14 @@ label{
   margin-top: auto;
 }
 
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -2797,6 +2805,10 @@ label{
 
 .h-full{
   height: 100%;
+}
+
+.max-h-20{
+  max-height: 5rem;
 }
 
 .min-h-screen{
@@ -2853,6 +2865,10 @@ label{
 
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .flex-col{
@@ -3236,6 +3252,11 @@ label{
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -3264,6 +3285,10 @@ label{
 
 .p-6{
   padding: 1.5rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-2{
@@ -3332,8 +3357,16 @@ label{
   padding-top: 1.25rem;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .font-display{
@@ -3430,6 +3463,10 @@ label{
 
 .tracking-\[0\.2em\]{
   letter-spacing: 0.2em;
+}
+
+.tracking-\[0\.3em\]{
+  letter-spacing: 0.3em;
 }
 
 .text-amber-200{
@@ -3532,6 +3569,10 @@ label{
 
 .opacity-80{
   opacity: 0.8;
+}
+
+.opacity-90{
+  opacity: 0.9;
 }
 
 .shadow-\[0_0_45px_rgba\(248\2c 113\2c 113\2c 0\.25\)\]{
@@ -3696,6 +3737,11 @@ label{
   color: rgb(125 211 252 / var(--tw-text-opacity));
 }
 
+.hover\:text-lava-200:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 211 193 / var(--tw-text-opacity));
+}
+
 .hover\:shadow-lava-ring:hover{
   --tw-shadow: 0 0 25px rgba(255, 100, 60, 0.45);
   --tw-shadow-colored: 0 0 25px var(--tw-shadow-color);
@@ -3819,6 +3865,10 @@ label{
 
   .lg\:grid-cols-\[minmax\(0\2c 3fr\)_minmax\(0\2c 2fr\)\]{
     grid-template-columns: minmax(0,3fr) minmax(0,2fr);
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 2fr\)_minmax\(0\2c 1fr\)\]{
+    grid-template-columns: minmax(0,2fr) minmax(0,1fr);
   }
 
   .lg\:flex-row{

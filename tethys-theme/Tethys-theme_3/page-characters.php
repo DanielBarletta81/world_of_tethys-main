@@ -23,6 +23,58 @@ get_header();
     </div>
 
     <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
+        <section class="space-y-6">
+            <p class="section-label">Meet the characters</p>
+            <h2 class="font-display text-3xl font-semibold text-slate-50">These are the people and creatures pulling Tethys apart—and stitching it back together.</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+                <article class="card-shell p-6 space-y-3">
+                    <h3 class="text-xl font-semibold text-slate-50">Igzier – The Exile Engineer</h3>
+                    <p class="text-sm text-slate-300">
+                        Igzier was supposed to spend his life keeping Sky City’s ribs from collapsing into the sea. A single political decision turns him into an exile—shoved off the wall and written out of the ledgers.
+                    </p>
+                    <p class="text-sm text-slate-300">
+                        He survives where he shouldn’t, with a mind that sees every crack in the system and a bond-creature the city can’t control. Igzier is the kind of person who fixes things even when they’re trying to kill him.
+                    </p>
+                </article>
+                <article class="card-shell p-6 space-y-3">
+                    <h3 class="text-xl font-semibold text-slate-50">Ravel – The Root-Listener</h3>
+                    <p class="text-sm text-slate-300">
+                        Ravel hears too much. As a child he got lost in the Younger Wood and discovered that roots and stone keep their own kind of memory. Now, years later, he lives close to the cliffs and ledges, reading the arguments in the rock.
+                    </p>
+                    <p class="text-sm text-slate-300">
+                        To Sky City he’s a hermit. To the forest, he’s an external hard drive with legs. To Igzier, he’s the first person who proves the world has been paying attention.
+                    </p>
+                </article>
+                <article class="card-shell p-6 space-y-3">
+                    <h3 class="text-xl font-semibold text-slate-50">Stryker – The Illegal Bond</h3>
+                    <p class="text-sm text-slate-300">
+                        Stryker is a raptor–pterosaur hybrid who slammed into the wrong window on the wrong night. He’s built for cliffside storms and steep dives, not neat stables or orderly patrols.
+                    </p>
+                    <p class="text-sm text-slate-300">
+                        He bonds to Igzier by accident and bad timing, forming a partnership the city never planned for and has no systems to contain. When Stryker is in the air, Sky City is no longer the highest thing around.
+                    </p>
+                </article>
+                <article class="card-shell p-6 space-y-3">
+                    <h3 class="text-xl font-semibold text-slate-50">Jairo – The Scarred Wrangler</h3>
+                    <p class="text-sm text-slate-300">
+                        Jairo’s job is to go outside the leafglass, bring bonded creatures to heel, and come back alive. Everyone who does that work carries scars—some visible, some not.
+                    </p>
+                    <p class="text-sm text-slate-300">
+                        He believes in survival more than he believes in orders, and he’s tied to the city by one fragile thing: fear of what will happen to the woman he loves if he refuses a bad command. His path will pull him between Sky City and the Tethys Sea, toward a bond-creature of his own.
+                    </p>
+                </article>
+                <article class="card-shell p-6 space-y-3">
+                    <h3 class="text-xl font-semibold text-slate-50">Karys – The Sky City Daughter</h3>
+                    <p class="text-sm text-slate-300">
+                        Karys grew up amid glass, gardens, and carefully managed water—high above the ledges and the sea. She understands how the city works on paper and, increasingly, how it fails in practice.
+                    </p>
+                    <p class="text-sm text-slate-300">
+                        Her connection to Igzier anchors the human side of the story: the cost of exile, the weight of staying behind, and what happens when your home is both a marvel and a machine that keeps throwing people away.
+                    </p>
+                    <p class="text-xs text-slate-500">Kel &amp; Herc enter later once their stories can be shown.</p>
+                </article>
+            </div>
+        </section>
         <section class="space-y-4">
             <p class="section-label">Featured bonds</p>
             <h2 class="font-display text-3xl font-semibold text-slate-50">Igzier, Stryker, Karys &amp; Ravel</h2>
@@ -42,6 +94,11 @@ get_header();
                         <li>• Bonded with a reckless sky-hound.</li>
                         <li>• Still deciding if the City deserves saving.</li>
                     </ul>
+                    <div class="mt-4">
+                        <a href="<?php echo esc_url( home_url( '/characters/igzier/' ) ); ?>" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-200">
+                            View Igzier’s file<span>↗</span>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="featured-card">
@@ -59,6 +116,11 @@ get_header();
                         <li>• Tracks Igzier through caves, shelves, and ash.</li>
                         <li>• Center of the Ashwing sigil.</li>
                     </ul>
+                    <div class="mt-4">
+                        <a href="<?php echo esc_url( home_url( '/characters/stryker/' ) ); ?>" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-200">
+                            View Stryker’s file<span>↗</span>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="featured-card">
@@ -76,6 +138,11 @@ get_header();
                         <li>• Sees where pipes—and policies—crack.</li>
                         <li>• One of the hands on the City’s scale.</li>
                     </ul>
+                    <div class="mt-4">
+                        <a href="<?php echo esc_url( home_url( '/characters/karys/' ) ); ?>" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-200">
+                            View Karys’s file<span>↗</span>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="featured-card">
@@ -93,6 +160,11 @@ get_header();
                         <li>• Talks to roots and a secretive archaeopteryx.</li>
                         <li>• Follows trail hum more than orders.</li>
                     </ul>
+                    <div class="mt-4">
+                        <a href="<?php echo esc_url( home_url( '/characters/ravel/' ) ); ?>" class="inline-flex items-center gap-1 text-[11px] font-semibold text-lava-400 hover:text-lava-200">
+                            View Ravel’s file<span>↗</span>
+                        </a>
+                    </div>
                 </article>
             </div>
         </section>
