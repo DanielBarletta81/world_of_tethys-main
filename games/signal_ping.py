@@ -10,7 +10,7 @@ from __future__ import annotations
 import random
 
 SIGNAL_SOURCES = [
-    ("Younger Woods canopy", "Sap-slick echoes and chittering gliders."),
+    ("Mystic Woods canopy", "Sap-slick echoes and chittering gliders."),
     ("Sky City underbelly", "Metallic hum mixed with coolant drip."),
     ("Watcher outpost", "Disciplined cadence with beacon pings every five beats."),
     ("Ashfall dunes", "Dry crackle, distant thunder, and glassed sand crunch."),

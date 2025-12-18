@@ -68,7 +68,7 @@ get_header();
                         <span class="text-lava-300">03</span>
                         <div>
                             <p class="font-semibold text-slate-100">Botanical dyes</p>
-                            <p>For Younger Woods healers—real recipes derived from woad + cochineal.</p>
+                            <p>For Mystic Woods healers—real recipes derived from woad + cochineal.</p>
                         </div>
                     </li>
                 </ul>

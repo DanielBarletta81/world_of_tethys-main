@@ -162,6 +162,18 @@
     background: radial-gradient(circle at 35% 20%, rgba(255,104,65,0.14), transparent 70%);
     z-index: -1;
   }
+  
+
+  .bg-books {
+  @apply relative isolate;
+  background-image:
+    linear-gradient(180deg, rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
+    url('tethys-theme/Tethys-theme_3/assets/images/bg-books.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
   .section-label {
     @apply inline-flex items-center gap-2 rounded-full border border-lava-400/30 bg-slate-950/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-lava-200;
@@ -299,8 +311,18 @@
     background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+  
   }
+  .bg-characters {
+    @apply relative isolate;
+    background-image:
+      linear-gradient(180deg, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)),
+      url('./images/backgrounds/characters-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
 
   .hero-video-wrapper {
     @apply min-h-screen;

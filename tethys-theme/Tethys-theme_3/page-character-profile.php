@@ -31,7 +31,19 @@ $characters = [
             'His exile drop coordinates were altered minutes before launch.',
             'Still receives anonymous data pings from the upper tiers.'
         ],
-        'glyph' => 'ashwing-glyph.svg'
+        'glyph' => 'ashwing-glyph.svg',
+        'social' => [
+            'handle' => '@Igz',
+            'music' => 'Root-hum / world-beat mixes',
+            'mood'  => 'Online · “Mapping fractures.”',
+            'location' => 'Sky City ledge network',
+            'signal' => 'Field rig + holo-slate rebuild stream'
+        ],
+        'comments' => [
+            ['author' => 'LedgeWatcher', 'text' => 'Rootroom says you rerouted half the vents from a ledge. Confirm?'],
+            ['author' => 'ArchivistSaela', 'text' => 'Your math is reckless but necessary. Keep sending the cracks.'],
+            ['author' => 'AshwingFan', 'text' => 'Drop the cipher pages when? The City is literally shaking.']
+        ]
     ],
     'stryker' => [
         'name' => 'Stryker',
@@ -55,14 +67,26 @@ $characters = [
             'Responds to a whistle sequence Melden encoded for Igzier.',
             'Knows at least three routes back into the City vents.'
         ],
-        'glyph' => 'ashwing-glyph.svg'
+        'glyph' => 'ashwing-glyph.svg',
+        'social' => [
+            'handle' => '@AshwingStryke',
+            'music' => 'Storm percussion / wing-beat bass',
+            'mood' => 'Tracking Igz · scarred but stubborn',
+            'location' => 'Cliff thermals over the Tethys Sea',
+            'signal' => 'Live talon-cam + screech translations'
+        ],
+        'comments' => [
+            ['author' => 'ChasmScout', 'text' => 'I heard you had burned wings, Stryker—how did that impact your flight and search?'],
+            ['author' => 'SkyCityKids', 'text' => 'You are a BEAST 🐉🔥 keep slicing the storms!'],
+            ['author' => 'WatcherInTraining', 'text' => 'Teach me that double-dive? Asking for a friend (me).']
+        ]
     ],
     'ravel' => [
         'name' => 'Ravel',
-        'tagline' => 'Younger Woods · Healer',
+        'tagline' => 'Mystic Woods · Healer',
         'status' => 'Field medic · Trail listener',
         'quote' => '“Roots tell you who fell. You just have to hear the bruise.”',
-        'summary' => 'Tea-drunk forest healer who hears color, tone, and bruises in the air instead of warnings. Quietly decides Igzier is worth keeping alive, even if it means translating the Younger Woods for a Sky City exile.',
+        'summary' => 'Tea-drunk forest healer who hears color, tone, and bruises in the air instead of warnings. Quietly decides Igzier is worth keeping alive, even if it means translating the Mystic Woods for a Sky City exile.',
         'stats' => [
             ['label' => 'Discipline', 'value' => 'Trail hum cartography'],
             ['label' => 'Companion', 'value' => 'Secretive archaeopteryx'],
@@ -79,7 +103,19 @@ $characters = [
             'Has a coil cipher that opens the Watcher’s route stones.',
             'Knows the true price the Woods demand for sanctuary.'
         ],
-        'glyph' => 'younger-woods-glyph.svg'
+        'glyph' => 'younger-woods-glyph.svg',
+        'social' => [
+            'handle' => '@RootListener',
+            'music' => 'Mono-string drones + forest hum',
+            'mood' => 'Quiet / tuned to the Younger Wood',
+            'location' => 'Halfway ledges · fungus clinic',
+            'signal' => 'Field notes + weird plant selfies'
+        ],
+        'comments' => [
+            ['author' => 'Screecher77', 'text' => 'Did the Younger Wood really archive voices? I felt them when I passed through.'],
+            ['author' => 'FeralMedic', 'text' => 'Your bone tea kept my bond running. Sending spores in thanks!'],
+            ['author' => 'Igz', 'text' => 'Still owe you three ledge dinners. Hold me to it.']
+        ]
     ],
     'karys' => [
         'name' => 'Karys',
@@ -103,7 +139,19 @@ $characters = [
             'Stores a “fail-safe bloom” keyed to Igzier’s biometrics.',
             'Has already bribed a Watcher archivist for exile data.'
         ],
-        'glyph' => 'greenhouse-glyph.svg'
+        'glyph' => 'greenhouse-glyph.svg',
+        'social' => [
+            'handle' => '@KarysSkyCity',
+            'music' => 'Glass-harp / rainfall loops',
+            'mood' => 'Calm surface · rebellious core',
+            'location' => 'Upper greenhouse tiers',
+            'signal' => 'Hydro lattice diagrams + covert posts'
+        ],
+        'comments' => [
+            ['author' => 'Tier2Archivist', 'text' => 'Your latest water models leaked. They look like rebellion.'],
+            ['author' => 'Saela', 'text' => 'Your bracelets hummed when the Watch passed. Protection spell?'],
+            ['author' => 'Igz', 'text' => 'Stay above the floodline. I’ll fix the rest.']
+        ]
     ],
     'melden' => [
         'name' => 'Melden',
@@ -127,7 +175,19 @@ $characters = [
             'Triumvirate erased his civic ID but not his ghost ciphers.',
             'His final note references “Project Varek.”'
         ],
-        'glyph' => 'mentor-glyph.svg'
+        'glyph' => 'mentor-glyph.svg',
+        'social' => [
+            'handle' => '@MeldenGhost',
+            'music' => 'Analog synth archives',
+            'mood' => 'Echo logged · always observing',
+            'location' => 'Shadow backups in the vents',
+            'signal' => 'Scheduled drops of ethics notes'
+        ],
+        'comments' => [
+            ['author' => 'WatcherNacre', 'text' => 'Your last directive auto-posted. I’m still parsing it.'],
+            ['author' => 'Igz', 'text' => 'You were right about the Cohort. Working on repairs.'],
+            ['author' => 'TriumvirateBot', 'text' => 'This account is under investigation.'],
+        ]
     ],
     'varek' => [
         'name' => 'Varek',
@@ -151,7 +211,19 @@ $characters = [
             'Possesses a rootbond key stolen from Lady Eldora.',
             'Maintains a hidden room inside the City’s central vent.'
         ],
-        'glyph' => 'shadow-glyph.svg'
+        'glyph' => 'shadow-glyph.svg',
+        'social' => [
+            'handle' => '@VarekRoutes',
+            'music' => 'Metallic echo + coil static',
+            'mood' => 'Ghosting the Watchers',
+            'location' => 'Where vents hum at 63 Hz',
+            'signal' => 'Map fragments + scrambled coordinates'
+        ],
+        'comments' => [
+            ['author' => 'ChalkRunner', 'text' => 'Saw your sigil near the lower lifts. Safe to follow?'],
+            ['author' => 'AshWinged', 'text' => 'Drop a new route south, the ledges are crowded.'],
+            ['author' => 'WatcherAudit', 'text' => 'We can still see you. Maybe.']
+        ]
     ],
     'herc' => [
         'name' => 'Herc',
@@ -168,14 +240,26 @@ $characters = [
         'notables' => [
             'Runs illicit courier routes beneath the blockade.',
             'Trains mammoths to drag down failing Sky City drones.',
-            'Has a standing debt with the Younger Woods healers.'
+            'Has a standing debt with the Mystic Woods healers.'
         ],
         'secrets' => [
             'Hid Igzier in a salt cyst during the first exile chase.',
             'Knows the identity of the Watcher who sabotaged the Weep.',
             'Keeps a ledger of City buyers paying for black-market storms.'
         ],
-        'glyph' => 'sea-glyph.svg'
+        'glyph' => 'sea-glyph.svg',
+        'social' => [
+            'handle' => '@HercOnTheTide',
+            'music' => 'Bone drum + whale beat',
+            'mood' => 'Salty / amused / armed',
+            'location' => 'Danian barges and storm lanes',
+            'signal' => 'Mammoth cam + weather rants'
+        ],
+        'comments' => [
+            ['author' => 'KelRunner', 'text' => 'Storm rig held! Sending you rum + parts.'],
+            ['author' => 'SeaByline', 'text' => 'Need that story about the drone you netted.'],
+            ['author' => 'SkyKid', 'text' => 'Teach me how to steer a mammoth??']
+        ]
     ],
     'saela' => [
         'name' => 'Saela (formerly Cali-Rai)',
@@ -199,7 +283,19 @@ $characters = [
             'Owns the only working mirror-loom outside the Triumvirate.',
             'Recorded Melden’s true confession before his death.'
         ],
-        'glyph' => 'whisper-glyph.svg'
+        'glyph' => 'whisper-glyph.svg',
+        'social' => [
+            'handle' => '@SaelaGlyph',
+            'music' => 'Encrypted choirs',
+            'mood' => 'Whispering in layers',
+            'location' => 'Archivist vaults',
+            'signal' => 'Symbol drops + clandestine polls'
+        ],
+        'comments' => [
+            ['author' => 'VerdantClerk', 'text' => 'Your last symbol flashed over the cistern. Intentional?'],
+            ['author' => 'Karys', 'text' => 'I decoded the ribbon. Message received.'],
+            ['author' => 'TriumvirateBot', 'text' => 'This thread is under moderation.']
+        ]
     ],
     'jairo' => [
         'name' => 'Jairo',
@@ -223,7 +319,19 @@ $characters = [
             'Embedded a kill-switch in the City’s water tax algorithm.',
             'Triumvirate lists him as “Asset under reconsideration.”'
         ],
-        'glyph' => 'infrastructure-glyph.svg'
+        'glyph' => 'infrastructure-glyph.svg',
+        'social' => [
+            'handle' => '@JairoRecords',
+            'music' => 'Pipe resonance + low brass',
+            'mood' => '“I’m fine.” (He isn’t.)',
+            'location' => 'Water archives, tier 3',
+            'signal' => 'Leak reports + survival memes'
+        ],
+        'comments' => [
+            ['author' => 'PipeTech44', 'text' => 'Your leak log saved three tiers. Drinks on me.'],
+            ['author' => 'Igz', 'text' => 'Hold the lines. I’m coming back for all of you.'],
+            ['author' => 'WatcherAudit', 'text' => 'Reminder: unauthorized ledgers are illegal.']
+        ]
     ],
     'maros' => [
         'name' => 'Maros',
@@ -247,12 +355,25 @@ $characters = [
             'Communicates with Varek through mirror knocks.',
             'Sky City pages about him are blank by design.'
         ],
-        'glyph' => 'watcher-glyph.svg'
+        'glyph' => 'watcher-glyph.svg',
+        'social' => [
+            'handle' => '@MarosQuiet',
+            'music' => 'Silence (on record)',
+            'mood' => 'Unreadable',
+            'location' => 'Watcher liaison decks',
+            'signal' => 'Minimal posts · mostly reactions'
+        ],
+        'comments' => [
+            ['author' => 'WatcherRecruit', 'text' => 'You ever smile? Asking anonymously.'],
+            ['author' => 'TriumvirateBot', 'text' => 'Reminder: confidentiality clauses apply.'],
+            ['author' => 'ShadowCart', 'text' => 'I know you keep the trophies polished.']
+        ]
     ]
 ];
 
 $character = $characters[$slug] ?? null;
 $assets_base = trailingslashit( get_template_directory_uri() ) . 'assets/images/characters/';
+$avatar_base = trailingslashit( $assets_base . 'avatars' );
 ?>
 <div class="min-h-screen bg-abyss bg-tethys-radial text-slate-100">
     <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
@@ -306,6 +427,45 @@ $assets_base = trailingslashit( get_template_directory_uri() ) . 'assets/images/
                 </div>
             </section>
 
+            <?php if ( ! empty( $character['social'] ) ) : ?>
+                <?php
+                    $social     = $character['social'];
+                    $avatar_key = $social['avatar'] ?? ( $slug . '.jpg' );
+                    $avatar_url = $avatar_base . $avatar_key;
+                ?>
+                <section class="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+                    <div class="rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 flex flex-col gap-5 md:flex-row md:items-center">
+                        <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-900/60">
+                            <img src="<?php echo esc_url( $avatar_url ); ?>" alt="<?php echo esc_attr( $character['name'] . ' avatar' ); ?>" class="h-full w-full object-cover" loading="lazy">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-[11px] uppercase tracking-[0.3em] text-slate-500">Profile signal</p>
+                            <h3 class="text-2xl font-semibold text-slate-50"><?php echo esc_html( $social['handle'] ?? '@' . $character['name'] ); ?></h3>
+                            <?php if ( ! empty( $social['mood'] ) ) : ?>
+                                <p class="text-sm text-slate-300"><?php echo esc_html( $social['mood'] ); ?></p>
+                            <?php endif; ?>
+                            <?php if ( ! empty( $social['signal'] ) ) : ?>
+                                <p class="text-xs uppercase tracking-[0.25em] text-lava-200"><?php echo esc_html( $social['signal'] ); ?></p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl border border-slate-800/70 bg-slate-950/70 p-6 space-y-3">
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>Music</span>
+                            <span class="text-right text-slate-100"><?php echo esc_html( $social['music'] ?? 'Unknown' ); ?></span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>Location</span>
+                            <span class="text-right text-slate-100"><?php echo esc_html( $social['location'] ?? 'Undisclosed' ); ?></span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>Status</span>
+                            <span class="text-right text-slate-100"><?php echo esc_html( $social['status'] ?? ( $social['mood'] ?? 'Active' ) ); ?></span>
+                        </div>
+                    </div>
+                </section>
+            <?php endif; ?>
+
             <?php if (!empty($character['secrets'])) : ?>
                 <section class="mt-10 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6">
                     <div class="flex items-center justify-between">
@@ -316,6 +476,26 @@ $assets_base = trailingslashit( get_template_directory_uri() ) . 'assets/images/
                         <?php foreach ($character['secrets'] as $secret) : ?>
                             <li class="rounded-2xl border border-slate-800/70 bg-slate-950/60 p-4">
                                 <?php echo esc_html( $secret ); ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </section>
+            <?php endif; ?>
+
+            <?php if ( ! empty( $character['comments'] ) ) : ?>
+                <section class="mt-10 rounded-3xl border border-slate-800/70 bg-slate-950/70 p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-2xl font-semibold text-slate-50">Signal thread</h3>
+                        <span class="text-[11px] uppercase tracking-[0.25em] text-slate-500">Fan chatter</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <?php foreach ( $character['comments'] as $comment ) : ?>
+                            <li class="rounded-2xl border border-slate-800/60 bg-slate-950/60 p-4 shadow-soft-bronze">
+                                <div class="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-slate-500">
+                                    <span><?php echo esc_html( $comment['author'] ?? 'Anonymous' ); ?></span>
+                                    <span>↳ open channel</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-200"><?php echo esc_html( $comment['text'] ?? '' ); ?></p>
                             </li>
                         <?php endforeach; ?>
                     </ul>

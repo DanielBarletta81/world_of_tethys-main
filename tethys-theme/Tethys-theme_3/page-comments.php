@@ -22,7 +22,7 @@ get_header();
                     'author' => 'Mara V. · aerospace analyst'
                 ],
                 [
-                    'quote' => 'The Younger Woods scenes smell like wet cedar and copper. I still hear the Weep.',
+                    'quote' => 'The Mystic Woods scenes smell like wet cedar and copper. I still hear the Weep.',
                     'author' => 'Noor · beta reader'
                 ],
                 [

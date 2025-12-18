@@ -14,7 +14,7 @@
   const fallbackComments = [
     {
       name: 'Ravel',
-      location: 'Younger Woods healer',
+      location: 'Mystic Woods healer',
       message: 'Signals 01 felt like the forest humming under my bones. The ashfall rhythm you described is exactly what I heard on last week’s hike.',
       timestamp: '2025-01-06T03:15:00.000Z'
     },

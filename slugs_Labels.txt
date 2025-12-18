@@ -26,7 +26,7 @@ You can copy this straight into WordPress page slugs & menu labels.
 
 * **Label:** `World`
 * **Slug:** `/world`
-* **Use:** High-level setting page (Sky City, Watcher, Younger Woods, Tethys Sea, Silurians, Pteros Island).
+* **Use:** High-level setting page (Sky City, Watcher, Mystic Woods, Tethys Sea, Silurians, Pteros Island).
 * **Optional child sections (anchors, not separate pages yet):**
 
   * `/world#sky-city`
